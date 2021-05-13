@@ -86,3 +86,27 @@ h1, h2, h3, h4, h5, h6 {
   padding: 30px;
   text-align: center;
 }
+
+.footer__block {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+}
+
+.footer__area2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__menu {
+  list-style: none;
+}
+
+.footer__newsletter {
+  
+}
+.footer__area-f {
+  margin-top: 15px;
+  color: white;
+  font-size: 10px;
+}
