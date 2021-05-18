@@ -1,0 +1,549 @@
+$c-primary: #1d3557;
+$c-secondary: #a7dadc;
+$c-complementary: #457b9d;
+$c-contrast: #b61624;
+$c-font: #264354;
+
+$fontbase: "Raleway", sans-serif;
+$font-special:
+$spacer: 32px;
+$margin: 8px;
+$padding: 8px;
+$hover: 1.2em;
+
+// ************************************************ ^ PROMĚNNÉ ^ *************************************** 
+
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: "Raleway Dots", cursive;
+}
+
+h2 {
+  font-size: 1.6em;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+
+h4 {
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;  
+  line-height: 1.8;
+  margin: $margin auto;
+}
+
+p {
+  margin: $margin auto;
+  line-height: 1.4em;
+}
+
+/* font-family: 'Raleway Dots', cursive; */
+
+a {
+  text-decoration: none;
+  color:$c-font;
+
+  &:hover {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
+    background-color:$complementary;
+    font-size: 1.2em;
+    color: white;
+    padding: $padding;
+    }
+
+  &:focus {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
+    background-color:$c-secondary;
+    font-size: 1.2em;
+    color: white;
+    padding: $padding;
+    }
+
+}
+
+
+
+/* -------------------------------------------- HEADER ------------------------------------------- */
+
+.header-main-components {
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary;
+}
+
+.second {
+  background-color: white;
+}
+
+.menu {
+  /* background-color: transparent; */
+  align-items: center;
+}
+
+.menu__item-mail .menu__link {
+  color:white;
+}
+
+.pseudologo {
+margin: 0;
+padding: 0;
+display: flex; 
+}
+
+.logo-name {
+  flex-basis: 10%;
+  margin: $margin * 3 $margin;
+}
+
+.logo-text {
+  display: block;
+  margin: $margin * 3 $margin;
+}
+.menu__list {
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: $margin * 3
+}
+
+.first .menu__list {
+  margin: 20px
+}
+
+.menu__item:not(:last-child) {
+  border-right: 1px solid $c-primary;
+}
+
+.menu__link {
+  display: block;
+  padding: $padding; 
+  color: $primary;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu__item-phone {
+  background-color: transparent;
+  color:white;
+  display: block;
+  padding: $padding; 
+  font-weight: bold;
+}
+
+.menu__link:hover, .menu__link:focus {
+  background-color: white;
+  color: $c-secondary;
+} 
+
+.search-component {
+  display: flex;
+  margin: auto;
+  display: block;
+  text-align: right;
+  flex-basis: 50%;
+}
+
+.icon-set {
+  color: white;
+  display: flex;
+  padding-left: $padding * 2;
+  justify-content: center;
+  list-style: none;
+}
+
+i {
+   margin: auto;
+}
+
+.fa-search, .fa-search a, .fa-search:hover, .fa-search:focus {
+  color: white;
+  background-color: none;
+}
+
+.login {
+  color: white;
+  padding: $padding;
+  margin: 0;
+  background-color: transparent;
+  border-color: transparent;
+  flex-basis: 10%;
+  font-size: 0.8em;
+  font-weight: 700;
+} 
+
+.login:hover, .login:focus {
+  padding: 8px;
+  font-size: 1.2em;
+  color: $c-secondary;
+} 
+
+/* ---------------------------------------------------- MAIN ----------------------------------------------------- */
+
+.main {
+  margin: 0 0 16px 0;
+  padding: 16px;
+  /* border: 3px solid #b9b9b9; */
+  overflow: auto;
+}
+
+.image {
+  width: 100%;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+.image--left {
+  max-width: 400px;
+  float: left;
+  margin: 0 32px 16px 0;
+}
+
+.image--right {
+  max-width: 400px;
+  float: right;
+  margin: 0 0 16px 32px;
+}
+/* **************************** HOMEPAGE SEMINARE *********************** */
+
+.container {
+	display: flex;
+}
+
+.seminarcards { 
+  display: flex;
+	width: 100%;
+	margin: 0 160px;
+	/* flex-basis: calc(100% - 30px); */
+	justify-content: space-between;
+    align-items: stretch;  /* PROČ SE KARTY NENATAHUJÍ ??? */
+	flex-wrap: nowrap;
+}
+
+.card {
+	margin:24px 16px;
+	flex-basis: 23%;
+}
+
+.scheldule {
+  background-color: rgb(18, 10, 94);
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  padding: 48px 48px 16px 48px;
+  border-radius: 10px 10px 0 0;
+  position:relative;
+}
+
+.type-place {
+  border: 1px solid $c-contrast;
+  background-color: $c-contrast;
+  font-size: 1em;
+  padding: $padding;
+  display: block;
+  border-radius: 4px;
+  position: absolute;
+  right:5%;
+  top:-10%;
+}
+
+
+.price {
+  background-color: white;
+  color:$c-contrast
+  font-size: 1em;
+  padding: 4px 8px;
+  display: block;
+  border: 1px solid #C3C3C3;
+  border-radius: 4px;
+  position: absolute;
+  left:5%;
+  top:-10%;
+  line-height: 1em;
+}
+
+.dph {
+  display: block;
+  font-size: 0.6em;
+}
+
+.card img {
+	width: 100%;
+	display: block;
+}
+
+.cardtext {
+	background-color: #e5e5e5;
+  color: black;
+	padding: 16px 8px;
+	display: block;
+	border-radius: 0 0 10px 10px;
+}
+
+.cardtext p, h3 {
+  padding: 16px
+}
+
+.cardtext h3 {
+	text-align: center;
+}
+
+.lecteur img{
+  width:100px;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px;
+  /* margin-left: -50px; */
+}
+
+.lecteur {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.name {
+  margin: auto 16px;
+  font-size: 0.8em;
+  color:black;
+}
+
+.more-info {
+  padding: 8px;
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: white;
+  display: block;
+  margin-left: 180px;
+}
+/* *********************    HOMEPAGE SEMINARE KONEC ********************** */
+
+/* ********************** HOMEPAGE AKTUALITY ******************************** */
+
+.header-section {
+  text-align: center;
+  display: block;
+  margin: 24px;
+}
+
+.news {
+  background-color: #e5e5e5;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.news-card {
+  display: block;
+  margin: 8px 32px;
+  padding: 8px;
+  flex-basis: 50%;
+  max-height: 450px;
+  position: relative;
+}
+
+.date-info {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid white;
+}
+
+/* .date {
+  text-align: left;
+  background-color: $c-contrast
+}
+
+.read-time {
+  text-align: right;
+  background-color: orchid;
+} */
+
+.news-obsah {
+  display: flex;
+  flex-basis: 50%;
+  padding: 0;
+}
+.news-img {
+  display: flex;
+  max-width: 50%;
+  height: 100%;
+  flex-basis: 50%;
+}
+
+.news-text {
+  padding: 0 16px;
+  display: block;
+}
+
+.news-text h3 {
+  padding: 0;
+}
+
+.more-info-news {
+  display: block;
+  margin: -16px;
+  position: absolute;
+  right: 10px;
+  background-color: white;
+  padding: 8px;
+  border-color: transparent;
+  border-radius: 4px;
+}
+/* ********************** HOMEPAGE AKTUALITY KONEC ******************************** */
+
+/* ********************** HOMEPAGE REFERENCE ******************************** */
+/* .kontejner {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 10px;
+		margin: 10px;
+	}
+
+		.jarmila, .klotylda, .magdalena, .lucinda {
+			border: solid 1px grey;
+			border-radius: 10px;
+			box-shadow: aqua 0 3px 5px -3px;
+			text-align: center;
+			padding: 15px;
+			margin: 10px;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 50%;
+		} */
+
+    /* ------- */
+
+	.references {
+		display: flex;
+		max-width: 100%;
+		flex-direction: row;
+		justify-content: space-between;			
+		flex-grow: 0;
+		flex-wrap: nowrap;
+		padding: 10px;
+		margin: 10px;
+		}
+
+	.person {
+		display: block;
+    text-align: center;
+		padding: 16px;
+    margin: 0 24px;	
+  }
+	
+	.person-img {
+    width: 150px;
+		max-width: 50%;
+		align-content: center;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px;
+	}
+/* ********************** HOMEPAGE REFERENCE KONEC ******************************** */
+/* -------------------------------- FOOTER ------------------------------------------- */
+.footer {
+  background-color: #e5e5e5;
+  padding: 30px;
+  text-align: left;
+}
+
+.footer__block {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.footer__area1 {
+  flex-basis: 20%;
+}
+
+.info {
+  margin-top: 8px;
+}
+
+.info a:hover, a:focus{
+  color: $c-contrast
+  font-weight: 1.2em;
+  padding: 0;
+  background-color: transparent;
+}
+
+.footer__area1 h3 { /* upravit zápis - vnořit podmínkku pro h3 do footer__area1 */
+  margin: 0;
+}
+
+.footer__area2 h3 {
+  margin-top: 0;
+}
+
+.footer__area2 {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+
+.footer__menu {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.footer__menu-item {
+  margin: 16px 0;
+} 
+
+.footer__newsletter {
+  display: block;
+  max-width: 15%;
+}
+
+.footer__newsletter button {
+  margin-top: 8px;
+}
+
+.footer__area-f {
+  margin-top: 15px;
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+  background-color:#C3C3C3;
+}
+
+.footer__newsletter-subscription {
+  padding: 12px;
+  background-color: white;
+  border: 0px;
+  border-radius: 4px;
+}
+
+.footer__newsletter-subscription:hover, .footer__newsletter-subscription:focus {
+  background-color: orange;
+}

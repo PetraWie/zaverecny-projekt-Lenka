@@ -3,11 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ELEVENTY - PROJEKT LENKA</title>
+	<title>PROJEKT LENKA</title>
 
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/180d9ba2e3.js" crossorigin="anonymous"></script>
 
 	<!-- Náš vlastní styl -->
 	<link rel="stylesheet" href="/css/style.css">
@@ -16,20 +20,78 @@
 <body>
 
 	<header class="header">
-		<h1 class="header__logo">{{title}}</h1>
+
+		<div class="header-main-components first">
+
+			<div class="menu header-contacts">
+				<ul class="menu__list">
+					<div class="icon-set">
+						<i class="fas fa-phone"></i>
+						<li class="menu__item-phone">+420 111 111 111</li>
+					</div>
+					
+					<div class="icon-set">
+						<i class="fas fa-at"></i>
+						<li class="menu__item-mail"><a href="mailto:info@projektlenka.cz" class="menu__link">info@projektlenka.cz</a></li>
+					</div>
+						
+				</ul>
+			</div>
+
+			<!--  --------------------------------   zkopírovaný element /sovaagency   ------------------------------------ -->
+			<div class="search-component">
+				<form action="/" method="post" id="frm-searchForm-form" class="main-search-form" novalidate="">
+					<div class="search-input">
+					<input type="text" name="search" autocomplete="off" placeholder="Hledej školení a nebo lektora"
+					style="position: relative; vertical-align: top; background-color: white; padding: 8px; width: 50%; border-radius: 15px; border-color: transparent;"	
+					id="frm-searchForm-form-search" required=""
+						data-nette-rules="[{&quot;op&quot;:&quot;:filled&quot;,&quot;msg&quot;:&quot;Zadejte výraz, který chcete vyhledat.&quot;}]">
+							<a href="#" onclick="$(this).closest('form').submit();
+							return false;" class="submit-form-button">
+								<span class="fa fa-search"></span>
+							</a>
+					</div>
+					<input type="hidden" name="_do" value="searchForm-form-submit">
+								<!--[if IE]><input type=IEbug disabled style="display:none"><![endif]-->
+				</form>
+						
+				<div class="snippet-searchForm-autocomplete">
+					<div id="snippet-searchForm-autocomplete">
+							<div class="search-autocomplete" style="display: none"></div>
+					</div>
+				</div>
+			</div>
+			<!-- ---------------------------------------------------------------------------------- -->
+		
+		 <button class="login">LOGIN</button> <!-- DOPLNIT LINK KAM TO POVEDE  -->
+		
+		</div>
+		
+		<!-- <h1 class="header__claim">{{title}}</h1> -->
+
+		<!-- <h2 class="header__claim">úvodní claim</h2> -->
+
+		<div class="header-main-components second">
+
+			<div class="pseudologo"> 
+				<div class="logo-name">VALE</div>
+				<div class="logo-text">vzdělávací agentura</div>
+			</div>
+			<nav class="menu">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="/" class="menu__link">Homepage</a></li>
+					<li class="menu__item"><a href="/zalozka1/" class="menu__link">Semináře</a></li>
+					<li class="menu__item"><a href="/zalozka2/" class="menu__link">Aktuality</a></li>
+					<li class="menu__item"><a href="/zalozka3/" class="menu__link">O nás</a></li>
+					<li class="menu__item"><a href="/aktuality/" class="menu__link">Aktuality</a></li>
+					<li class="menu__item"><a href="/zalozka5/" class="menu__link">Kontakt</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 
-	<nav class="menu">
-		<ul class="menu__list">
-			<li class="menu__item"><a href="/" class="menu__link">Úvod</a></li>
-			<li class="menu__item"><a href="/zalozka1/" class="menu__link">Zalozka1</a></li>
-			<li class="menu__item"><a href="/zalozka2/" class="menu__link">Zalozka2</a></li>
-			<li class="menu__item"><a href="/zalozka3/" class="menu__link">Zalozka3</a></li>
-			<li class="menu__item"><a href="/zalozka4/" class="menu__link">Zalozka4</a></li>
-			<li class="menu__item"><a href="/zalozka5/" class="menu__link">Zalozka5</a></li>
-		</ul>
-	</nav>
-       
+	<!-- <img class="homepage-image" src="/images/desk.jpg" alt="homepage_img"> -->
+	
 	<main class="main">
         {{ content | safe }}
     </main>
@@ -40,28 +102,28 @@
 
 			<div class="footer__area1">
 
-				<div>PRACOVNI NAZEV LENKA</div>
+				<div class="info"><h3>PRACOVNI NAZEV LENKA</h3></div>
 				<div>IČO: 123321123</div>
 
-				<div>Adresa
+				<div class="info"><h3>Adresa</h3> 
 					<div>
 						Ulice 1<br>
 						111 11 Město<br>
 					</div>
 				</div>
 		
-				<div>Kontakt
+				<div class="info"><h3>Kontakt</h3>
 					<div>
 						Telefon: 111 111 111<br>
-						www: www.projektlenka.cz<br>
-						E-mail: info@projektlenka.cz
+						www: <a href="https:://www.projektlenka.cz" target="_blank">www.projektlenka.cz</a><br>
+						E-mail: <a href="mailto:info@projektlenka.cz">info@projektlenka.cz</a>
 					</div>
 				</div>
 			</div>
 
 			<div class="footer__area2">
 
-				<ul class="footer__menu">Firma
+				<ul class="footer__menu"><h3>Firma</h3>
 					<li class="footer__menu-item"><a class="footer__menu-link" href="/onas">O nás</a></li>
 		
 					<li class="footer__menu-item"><a class="footer__menu-link" href="/seminare">Semináře</a></li>
@@ -69,10 +131,9 @@
 					<li class="footer__menu-item"><a class="footer__menu-link" href="/webinare">Webináře</a></li>
 		
 					<li class="footer__menu-item"><a class="footer__menu-link" href="/sluzby">Služby</a></li>
-		
 				</ul>
 
-				<ul class="footer__menu">Obchodní podmínky
+				<ul class="footer__menu"><h3>Obchodní podmínky</h3>
 					<li class="footer__menu-item"><a class="footer__menu-link" href="/obchodni-podminky">Obchodní podmínky</a></li>
 					
 					<li class="footer__menu-item"><a class="footer__menu-link" href="/organizacni-pokyny">Organizační pokyny</a></li>
@@ -80,15 +141,18 @@
 					<li class="footer__menu-item"><a class="footer__menu-link" href="/zpracovani-osobnich-udaju">Zpracování osobních údajů</a></li>
 				</ul>
 
-				<ul class="footer__menu">Spolupráce
+				<ul class="footer__menu"><h3>Spolupráce</h3>
 					<li class="footer__menu-item"><a class="footer__menu-link" href="/nabizim-kurzy">Nabízím kurzy</a></li>
 					
 					<li class="footer__menu-item"><a class="footer__menu-link" href="/nabizim-skolici-prostory">Nabízím školící prostory</a></li>
 				</ul>
 
 				<div class="footer__newsletter">
-					Chci dostávat novinky o plánovaných seminářích
-					<button>Přihlásit k odběru newsletteru</button>
+					<h3>Chci dostávat novinky o plánovaných seminářích</h3>
+					<label for="email">Váš email:</label>
+					<input type="email" name="email" id="email" size="17" maxlength="" placeholder="@" required>
+					<!-- <input type="submit" name="tlacitko" value="Přihlásit k odběru newsletteru"> -->
+					<button class="footer__newsletter-subscription" type="submit">Přihlásit k odběru newsletteru</button>
 				</div>
 
 			</div>
@@ -97,7 +161,7 @@
 
 		
 		<div class="footer__area-f">
-			&copy;2021, Petra, Czechitas
+			VEŠKERÉ ÚDAJE NA TOMTO WEBU JSOU SMYŠLENÉ. JEDNÁ SE O FIKTIVNÍ PROJEKT &copy;2021, Petra, Czechitas
 		</div>
 		
 		
