@@ -165,7 +165,7 @@ i {
 
 .fa-search, .fa-search a, .fa-search:hover, .fa-search:focus {
   color: white;
-  background-color: transparent;
+  background-color: none;
 }
 
 .login {
@@ -456,7 +456,7 @@ h1 {
   text-align: center;
 }
 
-.kontejner {
+.tym {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -466,9 +466,9 @@ h1 {
 }
 
 .lektor {
-  border: solid 1px grey;
+  border: solid 1px #457b9d;
   border-radius: 10px;
-  box-shadow: aqua 0 3px 5px -3px;
+  box-shadow: grey 0 3px 5px -3px;
   text-align: center;
   padding: 15px;
   margin: 10px;
@@ -477,6 +477,8 @@ h1 {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
+  margin-left: -150px;
+  padding-right: 32px;
 }
 .lektor .more-info {
   border-color: #b61624;
@@ -488,7 +490,7 @@ h1 {
 /* --------------------- TABLET --------------------- */
 @media screen and (min-width: 540px) {
   /* vubec nefunguje ...??? */
-  .kontejner {
+  .tym {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -510,7 +512,7 @@ h1 {
 }
 /* --------------------- POČÍTAČ --------------------- */
 @media screen and (min-width: 960px) {
-  .kontejner {
+  .tym {
     display: flex;
     max-width: 100%;
     flex-direction: row;
@@ -522,16 +524,18 @@ h1 {
   }
 
   .lektor {
-    display: block;
+    display: flex;
+    flex-basis: 65%;
+    margin: auto;
   }
   .lektor img {
     max-width: 50%;
     align-content: center;
   }
 }
-.kontejner {
+.tym-persona {
   display: flex;
-  width: 100%;
+  max-width: 100%;
   flex-direction: row;
   justify-content: space-between;
   flex-grow: 0;
@@ -540,25 +544,10 @@ h1 {
   margin: 10px;
 }
 
-.lektor {
-  display: block;
-  border: solid 1px #457b9d;
-  border-radius: 10px;
-  box-shadow: grey 0 3px 5px -3px;
-  text-align: center;
-  padding: 15px;
-  margin: 10px;
-}
-.lektor img {
+img {
   max-width: 50%;
   align-content: center;
   border-radius: 50%;
-}
-.lektor .more-info {
-  border-color: #b61624;
-  background-color: white;
-  display: block;
-  margin: auto;
 }
 
 /* ********************** lektoři konec ******************************** */
@@ -585,7 +574,7 @@ h1 {
 
 .info a:hover, a:focus {
   color: #b61624;
-  font-weight: 400;
+  font-weight: 1.2em;
   padding: 0;
   background-color: transparent;
 }
