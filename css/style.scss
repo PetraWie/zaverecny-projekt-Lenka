@@ -5,7 +5,7 @@ $c-contrast: #b61624;
 $c-font: #264354;
 
 $fontbase: "Raleway", sans-serif;
-$font-special:
+// $font-special: 
 $spacer: 32px;
 $margin: 8px;
 $padding: 8px;
@@ -68,7 +68,7 @@ a {
   color:$c-font;
 
   &:hover {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
-    background-color:$complementary;
+    background-color:$c-complementary;
     font-size: 1.2em;
     color: white;
     padding: $padding;
@@ -90,7 +90,7 @@ a {
 .header-main-components {
   display: flex;
   justify-content: space-between;
-  background-color: $primary;
+  background-color: $c-primary;
 }
 
 .second {
@@ -140,7 +140,7 @@ display: flex;
 .menu__link {
   display: block;
   padding: $padding; 
-  color: $primary;
+  color: $c-primary;
   text-decoration: none;
   font-weight: bold;
 }
@@ -271,7 +271,7 @@ i {
 
 .price {
   background-color: white;
-  color:$c-contrast
+  color:$c-contrast;
   font-size: 1em;
   padding: 4px 8px;
   display: block;
@@ -491,7 +491,7 @@ i {
 }
 
 .info a:hover, a:focus{
-  color: $c-contrast
+  color: $c-contrast;
   font-weight: 1.2em;
   padding: 0;
   background-color: transparent;
