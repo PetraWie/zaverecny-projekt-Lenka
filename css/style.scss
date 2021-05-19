@@ -100,6 +100,10 @@ a {
 .menu {
   /* background-color: transparent; */
   align-items: center;
+  padding: $padding;
+    :hover {
+      padding: 0;
+    }
 }
 
 .menu__item-mail .menu__link {
@@ -352,7 +356,6 @@ i {
   padding: 8px;
   display: flex;
   justify-content: space-between;
-  
 }
 
 .news-card {

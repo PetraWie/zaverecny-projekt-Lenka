@@ -80,6 +80,10 @@ a:focus {
 .menu {
   /* background-color: transparent; */
   align-items: center;
+  padding: 8px;
+}
+.menu :hover {
+  padding: 0;
 }
 
 .menu__item-mail .menu__link {
@@ -161,7 +165,7 @@ i {
 
 .fa-search, .fa-search a, .fa-search:hover, .fa-search:focus {
   color: white;
-  background-color: none;
+  background-color: transparent;
 }
 
 .login {
@@ -469,7 +473,7 @@ i {
 
 .info a:hover, a:focus {
   color: #b61624;
-  font-weight: 1.2em;
+  font-weight: 400;
   padding: 0;
   background-color: transparent;
 }
