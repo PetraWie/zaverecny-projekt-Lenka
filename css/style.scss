@@ -69,7 +69,7 @@ a {
 
   &:hover {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
     background-color:$c-complementary;
-    font-size: 1.2em;
+    font-size: 400;
     color: white;
     padding: $padding;
     }
@@ -184,7 +184,7 @@ i {
 
 .fa-search, .fa-search a, .fa-search:hover, .fa-search:focus {
   color: white;
-  background-color: none;
+  background-color: transparent;
 }
 
 .login {
@@ -512,7 +512,6 @@ h1 {
     margin: auto;
   }
 }
-
 	
 
 /* --------------------- TABLET --------------------- */
@@ -619,6 +618,17 @@ h1 {
 	
 
  /* ********************** lektoři konec ******************************** */ 
+
+
+// ***********************  KONTAKT  *************************************
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+}
+
+
 /* -------------------------------- FOOTER ------------------------------------------- */
 .footer {
   background-color: #e5e5e5;

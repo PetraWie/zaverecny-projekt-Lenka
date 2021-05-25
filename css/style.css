@@ -165,7 +165,7 @@ i {
 
 .fa-search, .fa-search a, .fa-search:hover, .fa-search:focus {
   color: white;
-  background-color: none;
+  background-color: transparent;
 }
 
 .login {
@@ -532,6 +532,7 @@ h1 {
     max-width: 50%;
     align-content: center;
   }
+  
 }
 .tym-persona {
   display: flex;
