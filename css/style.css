@@ -49,14 +49,12 @@ p {
 /* font-family: 'Raleway Dots', cursive; */
 a {
   text-decoration: none;
-  color: #264354;
+  color: white;
 }
 a:hover {
   /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
-  background-color: #457b9d;
-  font-size: 1.2em;
-  color: white;
-  padding: 8px;
+  font-size: 400;
+  color: #457b9d;
 }
 a:focus {
   /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
@@ -66,81 +64,39 @@ a:focus {
   padding: 8px;
 }
 
-/* -------------------------------------------- HEADER ------------------------------------------- */
-.header-main-components {
+button {
+  display: block;
+  background-color: white;
+  color: #457b9d;
+  padding: 4px 8px;
+  margin: 16px auto;
+  border-radius: 4px;
+  border: 1px solid white;
+}
+button :hover {
+  background-color: #a7dadc;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: white;
+}
+
+/************************************************ HEADER  *********************************************/
+.header-components {
   display: flex;
   justify-content: space-between;
   background-color: #1d3557;
 }
-
-.second {
-  background-color: white;
-}
-
-.menu {
-  /* background-color: transparent; */
-  align-items: center;
-  padding: 8px;
-}
-.menu :hover {
-  padding: 0;
-}
-
-.menu__item-mail .menu__link {
+.header-components .icon-set {
   color: white;
-}
-
-.pseudologo {
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.logo-name {
-  flex-basis: 10%;
-  margin: 24px 8px;
-}
-
-.logo-text {
-  display: block;
-  margin: 24px 8px;
-}
-
-.menu__list {
-  padding: 2px;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 24px;
-}
-
-.first .menu__list {
-  margin: 20px;
-}
-
-.menu__item:not(:last-child) {
-  border-right: 1px solid #1d3557;
-}
-
-.menu__link {
-  display: block;
   padding: 8px;
-  color: #1d3557;
-  text-decoration: none;
-  font-weight: bold;
+  padding-top: 14px;
 }
 
-.menu__item-phone {
-  background-color: transparent;
-  color: white;
-  display: block;
-  padding: 8px;
-  font-weight: bold;
-}
-
-.menu__link:hover, .menu__link:focus {
-  background-color: white;
-  color: #a7dadc;
+.header-contact {
+  display: flex;
+  justify-content: space-between;
 }
 
 .search-component {
@@ -149,68 +105,76 @@ a:focus {
   display: block;
   text-align: right;
   flex-basis: 50%;
+  padding: 8px;
+}
+.search-component span {
+  padding-top: 10px;
 }
 
-.icon-set {
-  color: white;
-  display: flex;
-  padding-left: 16px;
-  justify-content: center;
-  list-style: none;
-}
-
-i {
-  margin: auto;
-}
-
-.fa-search, .fa-search a, .fa-search:hover, .fa-search:focus {
-  color: white;
-  background-color: transparent;
+.search-input {
+  text-align: right;
 }
 
 .login {
-  color: white;
-  padding: 8px;
-  margin: 0;
+  flex-basis: 15%;
+  text-align: right;
+  max-height: 35px;
   background-color: transparent;
-  border-color: transparent;
-  flex-basis: 10%;
-  font-size: 0.8em;
-  font-weight: 700;
+  border: transparent;
+  color: #b61624;
 }
 
-.login:hover, .login:focus {
+.secondline {
+  background-color: white;
+  color: #1d3557;
+  border: 2px solid pink;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
   padding: 8px;
-  font-size: 1.2em;
-  color: #a7dadc;
 }
 
-/* ---------------------------------------------------- MAIN ----------------------------------------------------- */
-.main {
-  margin: 0 0 16px 0;
-  padding: 16px;
-  /* border: 3px solid #b9b9b9; */
-  overflow: auto;
+.menu {
+  padding: 8px;
+  margin: 8px;
 }
 
-.image {
-  width: 100%;
-  border: 5px solid rgba(0, 0, 0, 0.1);
+.menu-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.image--left {
-  max-width: 400px;
-  float: left;
-  margin: 0 32px 16px 0;
+.menu-item {
+  padding: padding;
+  margin: auto;
 }
 
-.image--right {
-  max-width: 400px;
-  float: right;
-  margin: 0 0 16px 32px;
+.menu-item:not(:last-child) {
+  border-right: 1px solid #a7dadc;
 }
 
-/* **************************** HOMEPAGE SEMINARE *********************** */
+.menu-link {
+  display: block;
+  padding: padding;
+  margin: 8px;
+  font-weight: lighter;
+  text-decoration: none;
+  color: #1d3557;
+}
+
+menu-link:hover {
+  background-color: #a7dadc;
+  color: white;
+}
+
+/************************************************ HEADER konec *********************************************/
+/***************************************************** MAIN ************************************************/
+/*************************************************MAIN konec ************************************************/
+/********************************************* HOMEPAGE SEMINARE ********************************************/
 .container {
   display: flex;
 }
@@ -232,7 +196,7 @@ i {
 }
 
 .scheldule {
-  background-color: #120a5e;
+  background-color: #1d3557;
   color: white;
   font-weight: 700;
   text-align: center;
@@ -311,15 +275,6 @@ i {
   margin: auto 16px;
   font-size: 0.8em;
   color: black;
-}
-
-.more-info {
-  padding: 8px;
-  border-radius: 4px;
-  border-color: transparent;
-  background-color: white;
-  display: block;
-  margin-left: 180px;
 }
 
 /* *********************    HOMEPAGE SEMINARE KONEC ********************** */
@@ -452,109 +407,83 @@ i {
 /* ********************** HOMEPAGE REFERENCE KONEC ******************************** */
 /* ********************** lektoři ******************************** */
 /* --------------------- MOBIL --------------------- */
-h1 {
+body {
+  min-height: 100vh;
+}
+
+h3 {
   text-align: center;
 }
 
-.tym {
+.singlepage-header {
   display: flex;
-  width: 100%;
-  flex-direction: column;
   justify-content: space-between;
-  padding: 10px;
-  margin: 10px;
 }
 
-.lektor {
-  border: solid 1px #457b9d;
-  border-radius: 10px;
-  box-shadow: grey 0 3px 5px -3px;
-  text-align: center;
-  padding: 15px;
-  margin: 10px;
-}
-.lektor img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-  margin-left: -150px;
-  padding-right: 32px;
-}
-.lektor .more-info {
-  border-color: #b61624;
+.team-lecteurs {
+  position: relative;
   background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.team-lecteurs :hover {
+  transform: translateY(-3px);
+}
+
+.lecteur {
+  border: 1px solid #b61624;
+}
+
+.lecteur-photo {
+  height: 100px;
+  position: relative;
+  padding: 8px;
+}
+.lecteur-photo img {
   display: block;
-  margin: auto;
-}
-
-/* --------------------- TABLET --------------------- */
-@media screen and (min-width: 540px) {
-  /* vubec nefunguje ...??? */
-  .tym {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .lektor {
-    flex-basis: 45%;
-    display: flex;
-    align-items: center;
-  }
-  .lektor img {
-    flex-basis: 100%;
-    height: auto;
-    flex-grow: 0;
-  }
-
-  .text {
-    padding-left: 10px;
-  }
-}
-/* --------------------- POČÍTAČ --------------------- */
-@media screen and (min-width: 960px) {
-  .tym {
-    display: flex;
-    max-width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-grow: 0;
-    flex-wrap: nowrap;
-    padding: 10px;
-    margin: 10px;
-  }
-
-  .lektor {
-    display: flex;
-    flex-basis: 65%;
-    margin: auto;
-  }
-  .lektor img {
-    max-width: 50%;
-    align-content: center;
-  }
-  
-}
-.tym-persona {
-  display: flex;
-  max-width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-grow: 0;
-  flex-wrap: nowrap;
-  padding: 10px;
-  margin: 10px;
-}
-
-img {
-  max-width: 50%;
-  align-content: center;
+  width: 120px;
+  margin: 0 auto;
+  border: 2px solid white;
   border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.lecteur-details {
+  text-align: center;
+}
+
+.lessons {
+  line-height: 1;
+  color: #b61624;
+}
+
+.special {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 4px 8px 4px 6px;
+  border-radius: 4px 0 12px 0;
+  background-color: #b61624;
+  color: white;
+  z-index: 99;
+}
+
+.team-lecteurs {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 /* ********************** lektoři konec ******************************** */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+}
+
 /* -------------------------------- FOOTER ------------------------------------------- */
 .footer {
-  background-color: #e5e5e5;
+  background-color: grey;
   padding: 30px;
   text-align: left;
 }

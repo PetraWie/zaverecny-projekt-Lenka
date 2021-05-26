@@ -65,13 +65,13 @@ p {
 
 a {
   text-decoration: none;
-  color:$c-font;
+  color:white;
 
   &:hover {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
-    background-color:$c-complementary;
+    // background-color:$c-complementary;
     font-size: 400;
-    color: white;
-    padding: $padding;
+    color: $c-complementary;
+    // padding: $padding;
     }
 
   &:focus {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
@@ -83,84 +83,44 @@ a {
 
 }
 
-
-
-/* -------------------------------------------- HEADER ------------------------------------------- */
-
-.header-main-components {
-  display: flex;
-  justify-content: space-between;
-  background-color: $c-primary;
-}
-
-.second {
+button {
+  display: block;
   background-color: white;
-}
+  color: $c-complementary;
+  padding: 4px $padding;
+  margin: 16px auto;
+  border-radius: 4px;
+  border: 1px solid white;
 
-.menu {
-  /* background-color: transparent; */
-  align-items: center;
-  padding: $padding;
     :hover {
-      padding: 0;
+      background-color: $c-secondary;
     }
 }
 
-.menu__item-mail .menu__link {
-  color:white;
-}
-
-.pseudologo {
-margin: 0;
-padding: 0;
-display: flex; 
-}
-
-.logo-name {
-  flex-basis: 10%;
-  margin: $margin * 3 $margin;
-}
-
-.logo-text {
-  display: block;
-  margin: $margin * 3 $margin;
-}
-.menu__list {
-  padding: 2px;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: $margin * 3
-}
-
-.first .menu__list {
-  margin: 20px
-}
-
-.menu__item:not(:last-child) {
-  border-right: 1px solid $c-primary;
-}
-
-.menu__link {
-  display: block;
-  padding: $padding; 
-  color: $c-primary;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.menu__item-phone {
-  background-color: transparent;
-  color:white;
-  display: block;
-  padding: $padding; 
-  font-weight: bold;
-}
-
-.menu__link:hover, .menu__link:focus {
+.wrapper {
+  margin: 0 auto;
   background-color: white;
-  color: $c-secondary;
-} 
+}
+
+/************************************************ HEADER  *********************************************/
+
+// -------------------------------------------- MODRÁ ČÁST ------------------------------------------- 
+.header-components {
+  display: flex;
+  justify-content: space-between;
+  background-color: $c-primary;
+
+   .icon-set  {
+     color: white;
+     padding: $padding;
+     padding-top: 14px;
+   }
+}
+
+.header-contact {
+  display: flex;
+  justify-content: space-between;
+}
 
 .search-component {
   display: flex;
@@ -168,68 +128,82 @@ display: flex;
   display: block;
   text-align: right;
   flex-basis: 50%;
+  padding: $padding;
+
+    span {
+      padding-top: 10px;
+    }
 }
 
-.icon-set {
-  color: white;
-  display: flex;
-  padding-left: $padding * 2;
-  justify-content: center;
-  list-style: none;
-}
-
-i {
-   margin: auto;
-}
-
-.fa-search, .fa-search a, .fa-search:hover, .fa-search:focus {
-  color: white;
-  background-color: transparent;
+.search-input {
+  text-align: right;
 }
 
 .login {
-  color: white;
-  padding: $padding;
-  margin: 0;
+  flex-basis: 15%;
+  text-align: right;
+  max-height: 35px;
   background-color: transparent;
-  border-color: transparent;
-  flex-basis: 10%;
-  font-size: 0.8em;
-  font-weight: 700;
-} 
+  border: transparent;
+  color: $c-contrast;
+}
 
-.login:hover, .login:focus {
+// -------------------------------------------- BÍLÁ ČÁST ------------------------------------------- 
+
+.secondline {
+  background-color: white;
+  color:$c-primary;
+  border:2px solid pink;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  padding: $padding;
+}
+
+.menu {
   padding: 8px;
-  font-size: 1.2em;
-  color: $c-secondary;
-} 
-
-/* ---------------------------------------------------- MAIN ----------------------------------------------------- */
-
-.main {
-  margin: 0 0 16px 0;
-  padding: 16px;
-  /* border: 3px solid #b9b9b9; */
-  overflow: auto;
+  margin: 8px;
 }
 
-.image {
-  width: 100%;
-  border: 5px solid rgba(0, 0, 0, 0.1);
+.menu-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.image--left {
-  max-width: 400px;
-  float: left;
-  margin: 0 32px 16px 0;
+.menu-item {
+  padding: padding;
+  margin: auto;
 }
 
-.image--right {
-  max-width: 400px;
-  float: right;
-  margin: 0 0 16px 32px;
+.menu-item:not(:last-child) {
+  border-right: 1px solid $c-secondary;   
 }
-/* **************************** HOMEPAGE SEMINARE *********************** */
+
+.menu-link {
+  display: block;
+  padding: padding;
+  margin: 8px;
+  font-weight: lighter;
+  text-decoration: none;
+  color: $c-primary;
+}
+
+menu-link:hover {
+  background-color: $c-secondary;
+  color: white; 
+}
+
+/************************************************ HEADER konec *********************************************/
+
+/***************************************************** MAIN ************************************************/
+
+/*************************************************MAIN konec ************************************************/
+
+/********************************************* HOMEPAGE SEMINARE ********************************************/
 
 .container {
 	display: flex;
@@ -241,7 +215,7 @@ i {
 	margin: 0 160px;
 	/* flex-basis: calc(100% - 30px); */
 	justify-content: space-between;
-    align-items: stretch;  /* PROČ SE KARTY NENATAHUJÍ ??? */
+  align-items: stretch;  /* PROČ SE KARTY NENATAHUJÍ ??? */
 	flex-wrap: nowrap;
 }
 
@@ -251,7 +225,7 @@ i {
 }
 
 .scheldule {
-  background-color: rgb(18, 10, 94);
+  background-color: $c-primary;
   color: white;
   font-weight: 700;
   text-align: center;
@@ -313,7 +287,7 @@ i {
 	text-align: center;
 }
 
-.lecteur img{
+.lecteur img {
   width:100px;
   border: 2px solid white;
   border-radius: 50%;
@@ -334,12 +308,12 @@ i {
 }
 
 .more-info {
-  padding: 8px;
-  border-radius: 4px;
-  border-color: transparent;
-  background-color: white;
-  display: block;
-  margin-left: 180px;
+  // padding: 8px;
+  // border-radius: 4px;
+  // border-color: transparent;
+  // background-color: white;
+  // display: block;
+  // margin-left: 180px;
 }
 /* *********************    HOMEPAGE SEMINARE KONEC ********************** */
 
@@ -476,148 +450,77 @@ i {
 /* ********************** lektoři ******************************** */
 
 /* --------------------- MOBIL --------------------- */
-h1 {
-	text-align: center;
+
+body {
+  min-height: 100vh;
 }
 
-.tym {
-	display: flex;
-	width: 100%;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 10px;
-	margin: 10px;
+h3 {
+  text-align: center;
 }
 
-.lektor {
-	border: solid 1px $c-complementary;
-	border-radius: 10px;
-	box-shadow: grey 0 3px 5px -3px;
-	text-align: center;
-	padding: 15px;
-	margin: 10px;
-
-  img {
-		max-width: 100%;
-		height: auto;
-		border-radius: 50%;
-    margin-left:-150px;
-    padding-right: 32px;
-	}
-
-  .more-info {
-    border-color: $c-contrast;
-    background-color: white;
-    display: block;
-    margin: auto;
-  }
-}
-	
-
-/* --------------------- TABLET --------------------- */
-@media screen and (min-width: 540px){  /* vubec nefunguje ...??? */
-  .tym {
-	  flex-direction: row;
-	  flex-wrap: wrap;
-  }
-
-  .lektor {
-	  flex-basis: 45%;
-	  display:flex;
-	  align-items: center;
-		
-    img {
-		  flex-basis: 100%;
-		  height: auto;
-		  flex-grow: 0;
-	  }
-  }
-
-  .text {
-	  padding-left: 10px;
-  } 
+.singlepage-header {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* --------------------- POČÍTAČ --------------------- */
-@media screen and (min-width:960px){
+.team-lecteurs {
+  position: relative;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-	.tym {
-		display: flex;
-		max-width: 100%;
-		flex-direction: row;
-		justify-content: space-between;			
-		flex-grow: 0;
-    flex-wrap: nowrap;
-		padding: 10px;
-		margin: 10px;
-	}
+  :hover{
+    transform: translateY(-3px);
+    }  
+}
 
-	.lektor {
-		display: flex;
-    flex-basis: 65%;
-    margin: auto;
-
+.lecteur {
+    border: 1px solid $c-contrast;
+}
+.lecteur-photo {
+  height: 100px;
+  position: relative;
+  padding: $padding;
 
     img {
-		max-width: 50%;
-		align-content: center;
-	  }
-	}
+      display: block;
+      width: 120px;
+      margin: 0 auto;
+      border: 2px solid white;
+      border-radius: 50%;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
 }
-// .kontejner {
-// 		display: flex;
-// 		width: 100%;
-// 		flex-direction: row;
-// 		justify-content: space-between;			
-// 		flex-grow: 0;
-// 		flex-wrap: nowrap;
-// 		padding: 10px;
-// 		margin: 10px;
-// }
 
-// .lektor {
-// 		display: block;
-//     border: solid 1px $c-complementary;
-// 		border-radius: 10px;
-// 		box-shadow: grey 0 3px 5px -3px;
-// 		text-align: center;
-// 		padding: 15px;
-// 		margin: 10px;
+.lecteur-details {
+  text-align: center;
+}
 
-//     img {
-// 		  max-width: 50%;
-//       align-content: center;
-// 			border-radius: 50%;
-// 	  }
+.lessons {
+  line-height: 1;
+  color:$c-contrast;
+}
 
-//     .more-info {
-//       border-color: $c-contrast;
-//       background-color: white;
-//       display: block;
-//       margin: auto;
-//     }
+.special {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 4px 8px 4px 6px;
+  border-radius: 4px 0 12px 0;
+  background-color: $c-contrast;
+  color: white;
+  z-index: 99;
+}
 
-// 	}
+.team-lecteurs {
+  display: grid;
+  gap: $spacer;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+}
 
-	.tym-persona {
-		display: flex;
-		max-width: 100%;
-		flex-direction: row;
-		justify-content: space-between;			
-		flex-grow: 0;
-    flex-wrap: nowrap;
-		padding: 10px;
-		margin: 10px;
-	}
 
-    img {
-		  max-width: 50%;
-		  align-content: center;
-		  border-radius: 50%;
-	  }
-	
-
- /* ********************** lektoři konec ******************************** */ 
+/* ********************** lektoři konec ******************************** */ 
 
 
 // ***********************  KONTAKT  *************************************
@@ -625,13 +528,13 @@ h1 {
 .contact {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 32px;
+  gap: 32px; 
 }
 
 
 /* -------------------------------- FOOTER ------------------------------------------- */
 .footer {
-  background-color: #e5e5e5;
+  background-color: grey;
   padding: 30px;
   text-align: left;
 }
