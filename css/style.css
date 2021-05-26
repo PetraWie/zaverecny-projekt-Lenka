@@ -127,13 +127,18 @@ button :hover {
 .secondline {
   background-color: white;
   color: #1d3557;
-  border: 2px solid pink;
   display: flex;
   justify-content: space-between;
 }
 
 .header-left {
   padding: 8px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto 8px;
+}
+.header-left .logo-text {
+  padding-left: 16px;
 }
 
 .menu {
@@ -192,7 +197,7 @@ menu-link:hover {
 
 .card {
   margin: 24px 16px;
-  flex-basis: 23%;
+  flex-basis: 29%;
 }
 
 .scheldule {

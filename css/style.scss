@@ -153,13 +153,19 @@ button {
 .secondline {
   background-color: white;
   color:$c-primary;
-  border:2px solid pink;
   display: flex;
   justify-content: space-between;
 }
 
 .header-left {
   padding: $padding;
+  display: flex;
+  justify-content: space-around;
+  margin: auto $margin;
+
+    .logo-text {
+      padding-left: $padding*2;
+    }
 }
 
 .menu {
@@ -221,7 +227,7 @@ menu-link:hover {
 
 .card {
 	margin:24px 16px;
-	flex-basis: 23%;
+	flex-basis: 29%;
 }
 
 .scheldule {
@@ -307,14 +313,14 @@ menu-link:hover {
   color:black;
 }
 
-.more-info {
-  // padding: 8px;
-  // border-radius: 4px;
-  // border-color: transparent;
-  // background-color: white;
-  // display: block;
-  // margin-left: 180px;
-}
+// .more-info {
+//   // padding: 8px;
+//   // border-radius: 4px;
+//   // border-color: transparent;
+//   // background-color: white;
+//   // display: block;
+//   // margin-left: 180px;
+// }
 /* *********************    HOMEPAGE SEMINARE KONEC ********************** */
 
 /* ********************** HOMEPAGE AKTUALITY ******************************** */
