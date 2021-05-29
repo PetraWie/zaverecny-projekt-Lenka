@@ -327,17 +327,35 @@ menu-link:hover {
 .news {
   background-color: #e5e5e5;
   padding: 8px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .news-card {
   display: block;
-  margin: 8px 32px;
+  margin: 8px;
   padding: 8px;
-  flex-basis: 50%;
-  max-height: 450px;
-  position: relative;
+}
+.news-card p {
+  display: none;
+}
+@media (min-width: 700px) {
+  .news-card p {
+    display: block;
+  }
+}
+
+@media (min-width: 700px) {
+  .news-obsah {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 8px;
+  }
+  .news-obsah img {
+    max-width: 30%;
+  }
+  .news-obsah .news-text {
+    margin-left: 16px;
+  }
 }
 
 .date-info {
@@ -349,31 +367,9 @@ menu-link:hover {
   border-bottom: 1px solid white;
 }
 
-/* .date {
-  text-align: left;
-  background-color: $c-contrast
-}
-
-.read-time {
-  text-align: right;
-  background-color: orchid;
-} */
-.news-obsah {
-  display: flex;
-  flex-basis: 50%;
-  padding: 0;
-}
-
 .news-img {
-  display: flex;
-  max-width: 50%;
-  height: 100%;
-  flex-basis: 50%;
-}
-
-.news-text {
-  padding: 0 16px;
   display: block;
+  max-width: 100%;
 }
 
 .news-text h3 {
@@ -382,50 +378,51 @@ menu-link:hover {
 
 .more-info-news {
   display: block;
-  margin: -16px;
-  position: absolute;
-  right: 10px;
-  background-color: white;
-  padding: 8px;
-  border-color: transparent;
-  border-radius: 4px;
+}
+@media (min-width: 700px) {
+  .more-info-news {
+    display: inline-block;
+    text-align: right;
+  }
+}
+
+.page {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.page .date-info {
+  border-bottom: 1px solid grey;
+}
+@media (min-width: 700px) {
+  .page .news-img {
+    max-width: 150px;
+  }
+}
+
+.aktuality-singlepage .news-obsah {
+  display: block;
+}
+.aktuality-singlepage .news-img {
+  max-width: 30%;
+  float: left;
+  margin: 8px;
+}
+.aktuality-singlepage .down {
+  max-width: 30%;
+  float: right;
+  margin: 8px;
 }
 
 /* ********************** HOMEPAGE AKTUALITY KONEC ******************************** */
 /* ********************** HOMEPAGE REFERENCE ******************************** */
-/* .kontejner {
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: 10px;
-		margin: 10px;
-	}
-
-		.jarmila, .klotylda, .magdalena, .lucinda {
-			border: solid 1px grey;
-			border-radius: 10px;
-			box-shadow: aqua 0 3px 5px -3px;
-			text-align: center;
-			padding: 15px;
-			margin: 10px;
-		}
-
-		img {
-			max-width: 100%;
-			height: auto;
-			border-radius: 50%;
-		} */
-/* ------- */
 .references {
-  display: flex;
-  max-width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-grow: 0;
-  flex-wrap: nowrap;
-  padding: 10px;
-  margin: 10px;
+  display: block;
+}
+@media (min-width: 700px) {
+  .references {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }
 
 .person {
@@ -462,8 +459,8 @@ body {
 }
 
 .lecteur {
-  border: 1px solid #b61624;
-  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
 }
 
 .lecteur-photo {
@@ -489,17 +486,16 @@ body {
   color: #b61624;
 }
 
-.special {
-  position: absolute;
+.specializace {
   left: 0px;
   top: 0px;
   padding: 4px 8px 4px 6px;
-  border-radius: 4px 0 12px 0;
+  border-radius: 8px 0 0px 0;
   background-color: #b61624;
   color: white;
   z-index: 99;
 }
-.special :hover {
+.specializace :hover {
   transform: translateY(-2px);
 }
 

@@ -377,17 +377,38 @@ menu-link:hover {
 .news {
   background-color: #e5e5e5;
   padding: 8px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .news-card {
   display: block;
-  margin: 8px 32px;
-  padding: 8px;
-  flex-basis: 50%;
-  max-height: 450px;
-  position: relative;
+  margin: $margin;
+  padding: $padding;
+    p{
+      display:none;
+    }
+
+    @media (min-width: 700px) {
+      p{
+        display: block;
+      }
+    }
+}
+
+.news-obsah {
+  @media (min-width:700px) {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: $margin;
+
+      img{
+        max-width: 30%;
+      }
+
+      .news-text {
+        margin-left: $margin*2;
+      }
+  }
 }
 
 .date-info {
@@ -399,85 +420,95 @@ menu-link:hover {
   border-bottom: 1px solid white;
 }
 
-/* .date {
-  text-align: left;
-  background-color: $c-contrast
-}
+// .news-obsah {
+//   display: flex;
+//   flex-basis: 50%;
+//   padding: 0;
+// }
 
-.read-time {
-  text-align: right;
-  background-color: orchid;
-} */
-
-.news-obsah {
-  display: flex;
-  flex-basis: 50%;
-  padding: 0;
-}
 .news-img {
-  display: flex;
-  max-width: 50%;
-  height: 100%;
-  flex-basis: 50%;
+  display: block;
+  max-width: 100%;
 }
 
-.news-text {
-  padding: 0 16px;
-  display: block;
-}
+// .news-text {
+//   padding: 0 16px;
+//   display: block;
+// }
 
 .news-text h3 {
   padding: 0;
 }
 
 .more-info-news {
-  display: block;
-  margin: -16px;
-  position: absolute;
-  right: 10px;
-  background-color: white;
-  padding: 8px;
-  border-color: transparent;
-  border-radius: 4px;
+  display:block;
+
+    @media (min-width:700px) {
+      display:inline-block;
+      text-align: right;
+    }
+  // margin: -16px;
+  // position: absolute;
+  // right: 10px;
+  // background-color: white;
+  // padding: 8px;
+  // border-color: transparent;
+  // border-radius: 4px;
 }
+
+.page {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  .date-info { 
+    border-bottom: 1px solid grey;
+  }
+    
+  @media (min-width:700px) {
+    .news-img { 
+      max-width:150px;
+    }
+  }
+}
+
+.aktuality-singlepage {
+    .news-obsah {
+      display: block;
+    }
+
+    .news-img {
+      max-width: 30%;
+      float: left;
+      margin: $margin;
+    }
+
+    .down {
+      max-width: 30%;
+      float: right;
+      margin: $margin;
+    }
+}
+
+// .article-column {
+//   display: grid;
+//   gap: $spacer;
+//   grid-template-columns: 2fr;
+// }
 /* ********************** HOMEPAGE AKTUALITY KONEC ******************************** */
 
 /* ********************** HOMEPAGE REFERENCE ******************************** */
-/* .kontejner {
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: 10px;
-		margin: 10px;
-	}
-
-		.jarmila, .klotylda, .magdalena, .lucinda {
-			border: solid 1px grey;
-			border-radius: 10px;
-			box-shadow: aqua 0 3px 5px -3px;
-			text-align: center;
-			padding: 15px;
-			margin: 10px;
-		}
-
-		img {
-			max-width: 100%;
-			height: auto;
-			border-radius: 50%;
-		} */
-
-    /* ------- */
-
 	.references {
-		display: flex;
-		max-width: 100%;
-		flex-direction: row;
-		justify-content: space-between;			
-		flex-grow: 0;
-		flex-wrap: nowrap;
-		padding: 10px;
-		margin: 10px;
+		display: block;
+      @media (min-width:700px) {
+        display: grid;
+        gap: $spacer;
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr))
+      }
+		// max-width: 100%;
+		// flex-direction: row;
+		// justify-content: space-between;			
+		// flex-grow: 0;
+		// flex-wrap: nowrap;
+		// padding: 10px;
+		// margin: 10px;
 		}
 
 	.person {
@@ -518,8 +549,9 @@ body {
 }
 
 .lecteur {
-    border: 1px solid $c-contrast;
-    border-radius: 4px;
+    // border: 1px solid $c-contrast;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
 }
 .lecteur-photo {
   height: 100px;
@@ -545,12 +577,12 @@ body {
   color:$c-contrast;
 }
 
-.special {
-  position: absolute;
+.specializace {
+  // position: absolute;
   left: 0px;
   top: 0px;
   padding: 4px 8px 4px 6px;
-  border-radius: 4px 0 12px 0;
+  border-radius: 8px 0 0px 0;
   background-color: $c-contrast;
   color: white;
   z-index: 99;
