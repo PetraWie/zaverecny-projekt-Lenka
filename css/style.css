@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   line-height: 1.8;
   margin: 8px auto;
+  text-align: center;
 }
 
 p {
@@ -72,6 +73,7 @@ button {
   margin: 16px auto;
   border-radius: 4px;
   border: 1px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 button :hover {
   background-color: #a7dadc;
@@ -83,42 +85,69 @@ button :hover {
 }
 
 /************************************************ HEADER  *********************************************/
-.header-components {
-  display: flex;
-  justify-content: space-between;
+.firstline {
   background-color: #1d3557;
+  display: block;
 }
-.header-components .icon-set {
+.firstline .icon-set {
   color: white;
   padding: 8px;
   padding-top: 14px;
+}
+@media (min-width: 700px) {
+  .firstline {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .header-contact {
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 700px) {
+  .header-contact {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .search-component {
-  display: flex;
-  margin: auto;
-  display: block;
-  text-align: right;
-  flex-basis: 50%;
-  padding: 8px;
-}
-.search-component span {
-  padding-top: 10px;
+  margin-left: 0;
+  min-width: 150px;
 }
 
 .search-input {
-  text-align: right;
+  text-align: left;
+  margin-left: 8px;
+  min-width: 250px;
+}
+@media (min-width: 700px) {
+  .search-input {
+    text-align: left;
+    margin-left: 0;
+    min-width: 400px;
+  }
+}
+.search-input span {
+  padding-top: 10px;
+}
+
+.searchnbutton {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+@media (min-width: 700px) {
+  .searchnbutton {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
 }
 
 .login {
-  flex-basis: 15%;
-  text-align: right;
-  max-height: 35px;
+  margin: 0;
   background-color: transparent;
   border: transparent;
   color: #b61624;
@@ -134,11 +163,18 @@ button :hover {
 .header-left {
   padding: 8px;
   display: flex;
-  justify-content: space-around;
   margin: auto 8px;
 }
 .header-left .logo-text {
-  padding-left: 16px;
+  margin: auto 8px;
+  max-width: 150px;
+  width: 100%;
+  display: block;
+}
+.header-left .logo-picture {
+  max-width: 150px;
+  width: 100%;
+  display: block;
 }
 
 .menu {
@@ -178,26 +214,24 @@ menu-link:hover {
 
 /************************************************ HEADER konec *********************************************/
 /***************************************************** MAIN ************************************************/
-/*************************************************MAIN konec ************************************************/
+/************************************************* MAIN konec ************************************************/
 /********************************************* HOMEPAGE SEMINARE ********************************************/
 .container {
-  display: flex;
+  display: block;
 }
 
-.seminarcards {
-  display: flex;
-  width: 100%;
-  margin: 0 160px;
-  /* flex-basis: calc(100% - 30px); */
-  justify-content: space-between;
-  align-items: stretch;
-  /* PROČ SE KARTY NENATAHUJÍ ??? */
-  flex-wrap: nowrap;
+@media (min-width: 700px) {
+  .seminarcards {
+    display: grid;
+    gap: 64px;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    width: 100%;
+  }
 }
 
 .card {
-  margin: 24px 16px;
-  flex-basis: 29%;
+  position: relative;
+  margin: 24px;
 }
 
 .scheldule {
@@ -262,7 +296,7 @@ menu-link:hover {
   text-align: center;
 }
 
-.lecteur img {
+.lecteur-card img {
   width: 100px;
   border: 2px solid white;
   border-radius: 50%;
@@ -270,7 +304,7 @@ menu-link:hover {
   /* margin-left: -50px; */
 }
 
-.lecteur {
+.lecteur-card {
   display: flex;
   justify-content: space-around;
   text-align: left;
@@ -403,7 +437,7 @@ menu-link:hover {
 
 .person-img {
   width: 150px;
-  max-width: 50%;
+  max-width: 80%;
   align-content: center;
   border-radius: 50%;
   box-shadow: 0 3px 10px;
@@ -416,10 +450,6 @@ body {
   min-height: 100vh;
 }
 
-h3 {
-  text-align: center;
-}
-
 .singlepage-header {
   display: flex;
   justify-content: space-between;
@@ -428,15 +458,12 @@ h3 {
 .team-lecteurs {
   position: relative;
   background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-.team-lecteurs :hover {
-  transform: translateY(-3px);
+  margin: 16px 0;
 }
 
 .lecteur {
   border: 1px solid #b61624;
+  border-radius: 4px;
 }
 
 .lecteur-photo {
@@ -472,6 +499,9 @@ h3 {
   color: white;
   z-index: 99;
 }
+.special :hover {
+  transform: translateY(-2px);
+}
 
 .team-lecteurs {
   display: grid;
@@ -480,6 +510,49 @@ h3 {
 }
 
 /* ********************** lektoři konec ******************************** */
+/* ***************************** MEDAILONEK ******************************** */
+.medailonek-button {
+  margin-right: 8px;
+}
+
+.medailonek {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 4fr 2fr;
+  justify-items: left;
+  grid-template-columns: auto-fill, minmax(200px, 2fr);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 24px;
+}
+.medailonek h2 {
+  text-align: left;
+}
+
+.medailonek-photo {
+  padding: 8px;
+  margin: auto 8px;
+}
+.medailonek-photo img {
+  width: 150px;
+  margin: auto;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.seminar-list {
+  padding: 8px;
+  margin: 16px;
+  border-left: 1px solid #a7dadc;
+}
+
+.lessons {
+  display: block;
+  padding: 8px;
+}
+
+/* ********************** MEDAILONEK konec ********************************** */
 .contact {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -488,80 +561,101 @@ h3 {
 
 /* -------------------------------- FOOTER ------------------------------------------- */
 .footer {
-  background-color: grey;
-  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 24px;
   text-align: left;
+  max-width: 100%;
+  display: block;
+}
+@media (min-width: 700px) {
+  .footer {
+    font-size: 0.7em;
+  }
 }
 
-.footer__block {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-}
-
-.footer__area1 {
-  flex-basis: 20%;
-}
-
-.info {
-  margin-top: 8px;
-}
-
-.info a:hover, a:focus {
-  color: #b61624;
-  font-weight: 1.2em;
+.footer-block h3 {
+  max-width: 100px;
+  text-align: left;
+  line-height: 1.1;
   padding: 0;
-  background-color: transparent;
+  margin: 0 0 4px 0;
 }
-
-.footer__area1 h3 {
-  /* upravit zápis - vnořit podmínkku pro h3 do footer__area1 */
-  margin: 0;
+.footer-block .info, .footer-block .footer-menu {
+  line-height: 1.2;
+  margin: 16px 0;
 }
-
-.footer__area2 h3 {
+.footer-block .nazev {
   margin-top: 0;
 }
-
-.footer__area2 {
-  display: flex;
-  justify-content: space-between;
-  flex-basis: 100%;
+@media (min-width: 700px) {
+  .footer-block {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    display: grid;
+    gap: 32px;
+    justify-items: left;
+  }
+}
+@media (min-width: 900px) {
+  .footer-block {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 2fr));
+  }
 }
 
-.footer__menu {
+.footer-menu {
   list-style: none;
   margin-top: 8px;
+  padding-left: 0;
 }
 
-.footer__menu-item {
+.footermenu-item {
   margin: 16px 0;
 }
 
-.footer__newsletter {
+.footer-newsletter {
+  max-width: 100%;
+  text-align: left;
+  line-height: 1.1;
+  padding-left: 0;
+  padding-bottom: 0px;
+  margin: 0;
+  margin-top: 0;
+}
+.footer-newsletter h3 {
+  margin-bottom: 8px;
+}
+.footer-newsletter p {
+  color: white;
+  font-size: 0.8em;
+}
+.footer-newsletter input {
+  padding: 4px 8px;
+  margin: 4px;
+  margin-left: 0;
+  border-radius: 4px;
+  border: 1px solid white;
+}
+
+.footer-newsletter-subscription {
+  max-width: 270px;
+  margin-left: 0;
   display: block;
-  max-width: 15%;
+  background-color: white;
+  color: #457b9d;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid white;
+}
+.footer-newsletter-subscription :hover {
+  background-color: #a7dadc;
 }
 
-.footer__newsletter button {
-  margin-top: 8px;
-}
-
-.footer__area-f {
-  margin-top: 15px;
+.footerarea-f {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 16px;
+  margin-bottom: -8px;
+  width: 100%;
   color: white;
   font-size: 0.8em;
   text-align: center;
-  background-color: #C3C3C3;
-}
-
-.footer__newsletter-subscription {
-  padding: 12px;
-  background-color: white;
-  border: 0px;
-  border-radius: 4px;
-}
-
-.footer__newsletter-subscription:hover, .footer__newsletter-subscription:focus {
-  background-color: orange;
 }/*# sourceMappingURL=style.css.map */

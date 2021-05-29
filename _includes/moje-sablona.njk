@@ -40,33 +40,34 @@
 							
 				</div>
 
-				<!--  --------------------------------   zkopírovaný element /sovaagency   ------------------------------------ -->
-				<div class="search-component">
-					<form action="/" method="post" id="frm-searchForm-form" class="main-search-form" novalidate="">
-						<div class="search-input">
-						<input type="text" name="search" autocomplete="off" placeholder="Hledej školení a nebo lektora"
-						style="position: relative; vertical-align: top; background-color: white; padding: 8px; width: 50%; border-radius: 15px; border-color: transparent;"	
-						id="frm-searchForm-form-search" required=""
-							data-nette-rules="[{&quot;op&quot;:&quot;:filled&quot;,&quot;msg&quot;:&quot;Zadejte výraz, který chcete vyhledat.&quot;}]">
-								<a href="#" onclick="$(this).closest('form').submit();
-								return false;" class="submit-form-button">
-									<span class="fa fa-search"></span>
-								</a>
-						</div>
-						<input type="hidden" name="_do" value="searchForm-form-submit">
-									<!--[if IE]><input type=IEbug disabled style="display:none"><![endif]-->
-					</form>
-							
-					<div class="snippet-searchForm-autocomplete">
-						<div id="snippet-searchForm-autocomplete">
-								<div class="search-autocomplete" style="display: none"></div>
+				<div class="searchnbutton">
+					<!--  --------------------------------   zkopírovaný element /sovaagency   ------------------------------------ -->
+					<div class="search-component">
+						<form action="/" method="post" id="frm-searchForm-form" class="main-search-form" novalidate="">
+							<div class="search-input">
+							<input type="text" name="search" autocomplete="off" placeholder="Hledej školení a nebo lektora"
+							style="position: relative; vertical-align: top; background-color: white; padding: 8px; width: 50%; border-radius: 15px; border-color: transparent;"	
+							id="frm-searchForm-form-search" required=""
+								data-nette-rules="[{&quot;op&quot;:&quot;:filled&quot;,&quot;msg&quot;:&quot;Zadejte výraz, který chcete vyhledat.&quot;}]">
+									<a href="#" onclick="$(this).closest('form').submit();
+									return false;" class="submit-form-button">
+										<span class="fa fa-search"></span>
+									</a>
+							</div>
+							<input type="hidden" name="_do" value="searchForm-form-submit">
+										<!--[if IE]><input type=IEbug disabled style="display:none"><![endif]-->
+						</form>
+								
+						<div class="snippet-searchForm-autocomplete">
+							<div id="snippet-searchForm-autocomplete">
+									<div class="search-autocomplete" style="display: none"></div>
+							</div>
 						</div>
 					</div>
+					<!-- ---------------------------------------------------------------------------------- -->
+				
+					<button class="login">LOGIN</button> <!-- DOPLNIT LINK KAM TO POVEDE  -->
 				</div>
-				<!-- ---------------------------------------------------------------------------------- -->
-			
-				<button class="login">LOGIN</button> <!-- DOPLNIT LINK KAM TO POVEDE  -->
-			
 			</div>
 			
 			<!-- <h1 class="header__claim">{{title}}</h1> -->
@@ -76,7 +77,8 @@
 			<div class="header-components secondline">
 
 				<div class="header-left"> 
-					<div class="logo-name">LOGO : VALE</div>
+
+					<img class="logo-picture" src="/images/logo-VALE-Lenka-prototyp.png" alt="logoVALE">
 
 					<div class="logo-text"> vzdělávací agentura </div>
 				</div>
@@ -102,69 +104,66 @@
 
 
 		<footer class="footer">
-			<div class="footer__block">
+			<div class="footer-block">
 
-				<div class="footer__area1">
-
-					<div class="info"><h3>PRACOVNI NAZEV LENKA</h3></div>
-					<div>IČO: 123321123</div>
+				<div class="footer-menu">
+					<div class="info nazev"><h3>vzdělávací agentura VAlE<br></h3>
+					IČO: 123321123</div>
 
 					<div class="info"><h3>Adresa</h3> 
-						<div>
-							Ulice 1<br>
-							111 11 Město<br>
-						</div>
+						
+						Ulice 1<br>
+						111 11 Město<br>
+						
 					</div>
 			
 					<div class="info"><h3>Kontakt</h3>
-						<div>
-							Telefon: 111 111 111<br>
-							www: <a href="https:://www.projektlenka.cz" target="_blank">www.projektlenka.cz</a><br>
-							E-mail: <a href="mailto:info@projektlenka.cz">info@projektlenka.cz</a>
-						</div>
+						
+						Telefon: +420 111 111 111<br>
+						<a href="https:://www.projektlenka.cz" target="_blank">www.projektlenka.cz</a><br>
+						<a href="mailto:info@projektlenka.cz">info@projektlenka.cz</a>
+						
 					</div>
 				</div>
 
-				<div class="footer__area2">
+				
+				<ul class="footer-menu"><h3>Firma</h3>
+					<li class="footermenu-item"><a class="footermenu-link" href="/onas">O nás</a></li>
+		
+					<li class="footermenu-item"><a class="footermenu-link" href="/seminare">Semináře</a></li>
+		
+					<li class="footermenu-item"><a class="footermenu-link" href="/aktuality">Aktuality</a></li>
+		
+					<li class="footermenu-item"><a class="footermenu-link" href="/lektori">Lektoři</a></li>
+				</ul>
 
-					<ul class="footer__menu"><h3>Firma</h3>
-						<li class="footer__menu-item"><a class="footer__menu-link" href="/onas">O nás</a></li>
-			
-						<li class="footer__menu-item"><a class="footer__menu-link" href="/seminare">Semináře</a></li>
-			
-						<li class="footer__menu-item"><a class="footer__menu-link" href="/webinare">Webináře</a></li>
-			
-						<li class="footer__menu-item"><a class="footer__menu-link" href="/sluzby">Služby</a></li>
-					</ul>
+				<ul class="footer-menu"><h3>Obchodní podmínky</h3>
+					<li class="footermenu-item"><a class="footermenu-link" href="/obchodni-podminky">Obchodní podmínky</a></li>
+					
+					<li class="footermenu-item"><a class="footermenu-link" href="/organizacni-pokyny">Organizační pokyny</a></li>
+					
+					<li class="footermenu-item"><a class="footermenu-link" href="/zpracovani-osobnich-udaju">Zpracování osobních údajů</a></li>
+				</ul>
 
-					<ul class="footer__menu"><h3>Obchodní podmínky</h3>
-						<li class="footer__menu-item"><a class="footer__menu-link" href="/obchodni-podminky">Obchodní podmínky</a></li>
-						
-						<li class="footer__menu-item"><a class="footer__menu-link" href="/organizacni-pokyny">Organizační pokyny</a></li>
-						
-						<li class="footer__menu-item"><a class="footer__menu-link" href="/zpracovani-osobnich-udaju">Zpracování osobních údajů</a></li>
-					</ul>
+				<ul class="footer-menu"><h3>Spolupráce</h3>
+					<li class="footermenu-item"><a class="footermenu-link" href="/nabizim-kurzy">Nabízím kurzy</a></li>
+					
+					<li class="footermenu-item"><a class="footermenu-link" href="/nabizim-skolici-prostory">Nabízím školící prostory</a></li>
+				</ul>
 
-					<ul class="footer__menu"><h3>Spolupráce</h3>
-						<li class="footer__menu-item"><a class="footer__menu-link" href="/nabizim-kurzy">Nabízím kurzy</a></li>
-						
-						<li class="footer__menu-item"><a class="footer__menu-link" href="/nabizim-skolici-prostory">Nabízím školící prostory</a></li>
-					</ul>
-
-					<div class="footer__newsletter">
-						<h3>Chci dostávat novinky o plánovaných seminářích</h3>
-						<label for="email">Váš email:</label>
-						<input type="email" name="email" id="email" size="17" maxlength="" placeholder="@" required>
-						<!-- <input type="submit" name="tlacitko" value="Přihlásit k odběru newsletteru"> -->
-						<button class="footer__newsletter-subscription" type="submit">Přihlásit k odběru newsletteru</button>
-					</div>
-
+				<div class="footer-newsletter">
+					<h3>Chci dostávat novinky o plánovaných seminářích</h3>
+					<label for="email">Váš email:</label>
+					<input type="email" name="email" id="email" size="24" maxlength="" placeholder="@" required>
+					<!-- <input type="submit" name="tlacitko" value="Přihlásit k odběru newsletteru"> -->
+					<button class="footer-newsletter-subscription" type="submit">Přihlásit k odběru newsletteru</button>
+					<p>* přihlášením k odběru newslwtteru souhlasíte se spracováním osobních údajů</p>
 				</div>
 
 			</div>	
 
 			
-			<div class="footer__area-f">
+			<div class="footerarea-f">
 				VEŠKERÉ ÚDAJE NA TOMTO WEBU JSOU SMYŠLENÉ. JEDNÁ SE O FIKTIVNÍ PROJEKT &copy;2021, Petra, Czechitas
 			</div>
 			
