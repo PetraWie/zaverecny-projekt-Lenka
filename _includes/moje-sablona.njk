@@ -84,6 +84,10 @@
 				</div>
 
 				<nav class="menu">
+
+					<input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+					<label for="menu-checkbox" class="menu__toggler">☰</label>
+
 					<ul class="menu-list">
 						<li class="menu-item"><a href="/" class="menu-link">Homepage</a></li>
 						<li class="menu-item"><a href="/seminare/" class="menu-link">Semináře</a></li>
@@ -152,7 +156,10 @@
 				</ul>
 
 				<form class="footer-newsletter" action="https://submit-form.com/7rhA77z6" method="post">
-				
+					
+					<input 	type="hidden" name="_redirect" value="https://your-website.com/thanks" />
+
+
 					<h3>Chci dostávat novinky o plánovaných seminářích</h3>
 					<label for="email">Váš email:</label>
 					<input type="email" name="email" id="email" size="24" maxlength="" placeholder="@" required>

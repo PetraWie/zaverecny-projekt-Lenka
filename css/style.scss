@@ -199,8 +199,9 @@ button {
 
     .logo-picture {
       max-width: 150px;
+      height: auto;
       width: 100%;
-      display: block;
+      display: inline-block;
     }
 }
 
