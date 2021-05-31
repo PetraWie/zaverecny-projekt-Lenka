@@ -178,21 +178,32 @@ button :hover {
   display: inline-block;
 }
 
+.menu-class-checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
 .menu {
   padding: 8px;
   margin: 8px;
 }
 
 .menu-list {
+  display: none;
   list-style: none;
-  display: flex;
   margin: 0;
   padding: 0;
+  background-color: #a7dadc;
+}
+
+.menu-checkbox:checked ~ .menu-list {
+  display: block;
 }
 
 .menu-item {
   padding: padding;
   margin: auto;
+  border-bottom: 1px solid white;
 }
 
 .menu-item:not(:last-child) {
@@ -209,8 +220,12 @@ button :hover {
 }
 
 menu-link:hover {
-  background-color: #a7dadc;
+  background-color: #457b9d;
   color: white;
+}
+
+.menu-toggler {
+  cursor: pointer;
 }
 
 /************************************************ HEADER konec *********************************************/

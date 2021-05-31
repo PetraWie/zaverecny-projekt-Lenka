@@ -205,21 +205,33 @@ button {
     }
 }
 
+.menu-class-checkbox {
+  position: absolute;
+  left:-9999px;  //stejné jako display:none
+}
+
 .menu {
   padding: 8px;
   margin: 8px;
 }
 
 .menu-list {
+  display:none;
   list-style: none;
-  display: flex;
+  // display: flex;
   margin: 0;
   padding: 0;
+  background-color: $c-secondary;
+}
+
+.menu-checkbox:checked ~ .menu-list {
+  display:block;
 }
 
 .menu-item {
   padding: padding;
   margin: auto;
+  border-bottom: 1px solid white;
 }
 
 .menu-item:not(:last-child) {
@@ -236,8 +248,12 @@ button {
 }
 
 menu-link:hover {
-  background-color: $c-secondary;
+  background-color: $c-complementary;
   color: white; 
+}
+
+.menu-toggler {
+  cursor:pointer;
 }
 
 /************************************************ HEADER konec *********************************************/
