@@ -1,5 +1,5 @@
 $c-primary: #1d3557;
-$c-secondary: #a7dadc;
+$c-secondary: #EA9FA1;
 $c-complementary: #457b9d;
 $c-contrast: #b61624;
 $c-font: #264354;
@@ -71,7 +71,7 @@ a {
   &:hover {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
     // background-color:$c-complementary;
     font-size: 400;
-    color: $c-complementary;
+    color: white;
     // padding: $padding;
     }
 
@@ -126,7 +126,9 @@ button {
 // MAIL PLUS TELEFON
 .header-contact { 
   display: flex;
+  font-size: 0.8em;
   justify-content: space-between;
+  padding: $padding $padding*2;
     
   @media  (min-width:700px) {
     display: flex;
@@ -210,22 +212,22 @@ button {
   left:-9999px;  //stejné jako display:none
 }
 
+.menu-class-checkbox:checked ~ .menu-list {
+  display:block;
+}
+
 .menu {
   padding: 8px;
   margin: 8px;
 }
 
 .menu-list {
-  display:none;
+  display: none;
   list-style: none;
   // display: flex;
   margin: 0;
   padding: 0;
   background-color: $c-secondary;
-}
-
-.menu-checkbox:checked ~ .menu-list {
-  display:block;
 }
 
 .menu-item {
@@ -247,8 +249,8 @@ button {
   color: $c-primary;
 }
 
-menu-link:hover {
-  background-color: $c-complementary;
+.menu-link:hover {
+  // background-color: $c-complementary;
   color: white; 
 }
 
@@ -338,11 +340,12 @@ menu-link:hover {
 }
 
 .cardtext {
-	background-color: #e5e5e5;
+	background-color: white;
   color: black;
 	padding: 16px 8px;
 	display: block;
-	border-radius: 0 0 10px 10px;
+	border-radius: 0 0 8px 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .cardtext p, h3 {
@@ -354,25 +357,31 @@ menu-link:hover {
 }
 
 .lecteur-card img {
-  width:100px;
-  border: 2px solid white;
-  border-radius: 50%;
-  box-shadow: 0 3px 10px;
-  /* margin-left: -50px; */
+max-width:130px;
+margin: auto;
+border: 2px solid white;
+border-radius: 50%;
+box-shadow: 0 3px 10px;
 }
 
 .lecteur-card {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: left;
+  padding: $padding;
 }
 
-.name {
+.intro {
+  display: block;
   margin: auto 16px;
   font-size: 0.8em;
   color:black;
 }
 
+.name {
+  font-weight: bold;
+  margin-bottom: $margin;
+}
 // .more-info {
 //   // padding: 8px;
 //   // border-radius: 4px;
@@ -392,7 +401,7 @@ menu-link:hover {
 }
 
 .news {
-  background-color: #e5e5e5;
+  background-color: #f8f8f8;
   padding: 8px;
 }
 
@@ -540,7 +549,7 @@ menu-link:hover {
 		max-width: 80%;
 		align-content: center;
     border-radius: 50%;
-    box-shadow: 0 3px 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 	}
 /* ********************** HOMEPAGE REFERENCE KONEC ******************************** */
 
@@ -570,19 +579,20 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
 }
+
 .lecteur-photo {
   height: 100px;
   position: relative;
   padding: $padding;
-
-    img {
-      display: block;
-      width: 120px;
-      margin: 0 auto;
-      border: 2px solid white;
-      border-radius: 50%;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
+  
+  img { 
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    // border: 1px solid pink;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .lecteur-details {
@@ -624,44 +634,80 @@ body {
 }
 
 .medailonek {
-  display: grid;
-  gap: $spacer;
-	grid-template-columns: 1fr 4fr 2fr;
-	justify-items: left;
-  grid-template-columns:(auto-fill, minmax(200px,2fr));
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin: $margin*3;
-   
-  h2 {
-      text-align: left;
-    }
+  display: block;
+  text-align:center;
+}
+
+.seminar-list {
+  border-top: 1px solid $c-secondary; 
 }
 
 .medailonek-photo {
   padding: $padding;
-  margin:auto $margin;
+  margin: auto $margin;
 
-    img {
-      width: 150px;
-      margin: auto;
-      border: 2px solid white;
-      border-radius: 50%;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
+  img {
+    width: 150px;
+    margin: auto 0;
+    // border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  }
   
 }
 
-.seminar-list {
-  padding: $padding;
-  margin:$margin*2; 
-  border-left: 1px solid $c-secondary; 
+.part {
+  margin-bottom: $margin*2;
+}
+
+
+@media (min-width:700px) {
+
+  .medailonek {
+    display: grid;
+    gap: $spacer;
+    grid-template-columns: 1fr 4fr 2fr;
+    justify-items: left;
+    grid-template-columns:(auto-fill, minmax(200px,2fr));
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    margin: $margin*3;
+    
+    h2 {
+      text-align: left;
+    }
+  }
+
+  .seminar-list {
+    padding: $padding;
+    margin:$margin*2; 
+    border-left: 1px solid $c-secondary; 
+  }
 }
 
 .lessons {
-  display: block;
-  padding: $padding;
+display: block;
+padding: $padding;
 }
+
+//   // .medailonek-photo {
+//   //   padding: $padding;
+//   //   margin:auto $margin;
+
+//   //   img {
+//   //     width: 150px;
+//   //     margin: auto;
+//   //     // border: 2px solid white;
+//   //     border-radius: 50%;
+//   //     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+//   //   }
+    
+//   // }
+// }
+
+
+
+
 
 /* ********************** MEDAILONEK konec ********************************** */ 
 

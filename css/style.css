@@ -55,11 +55,11 @@ a {
 a:hover {
   /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
   font-size: 400;
-  color: #457b9d;
+  color: white;
 }
 a:focus {
   /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
-  background-color: #a7dadc;
+  background-color: #EA9FA1;
   font-size: 1.2em;
   color: white;
   padding: 8px;
@@ -76,7 +76,7 @@ button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 button :hover {
-  background-color: #a7dadc;
+  background-color: #EA9FA1;
 }
 
 .wrapper {
@@ -103,7 +103,9 @@ button :hover {
 
 .header-contact {
   display: flex;
+  font-size: 0.8em;
   justify-content: space-between;
+  padding: 8px 16px;
 }
 @media (min-width: 700px) {
   .header-contact {
@@ -183,6 +185,10 @@ button :hover {
   left: -9999px;
 }
 
+.menu-class-checkbox:checked ~ .menu-list {
+  display: block;
+}
+
 .menu {
   padding: 8px;
   margin: 8px;
@@ -193,11 +199,7 @@ button :hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #a7dadc;
-}
-
-.menu-checkbox:checked ~ .menu-list {
-  display: block;
+  background-color: #EA9FA1;
 }
 
 .menu-item {
@@ -207,7 +209,7 @@ button :hover {
 }
 
 .menu-item:not(:last-child) {
-  border-right: 1px solid #a7dadc;
+  border-right: 1px solid #EA9FA1;
 }
 
 .menu-link {
@@ -219,8 +221,7 @@ button :hover {
   color: #1d3557;
 }
 
-menu-link:hover {
-  background-color: #457b9d;
+.menu-link:hover {
   color: white;
 }
 
@@ -297,11 +298,12 @@ menu-link:hover {
 }
 
 .cardtext {
-  background-color: #e5e5e5;
+  background-color: white;
   color: black;
   padding: 16px 8px;
   display: block;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .cardtext p, h3 {
@@ -313,23 +315,30 @@ menu-link:hover {
 }
 
 .lecteur-card img {
-  width: 100px;
+  max-width: 130px;
+  margin: auto;
   border: 2px solid white;
   border-radius: 50%;
   box-shadow: 0 3px 10px;
-  /* margin-left: -50px; */
 }
 
 .lecteur-card {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: left;
+  padding: 8px;
 }
 
-.name {
+.intro {
+  display: block;
   margin: auto 16px;
   font-size: 0.8em;
   color: black;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 /* *********************    HOMEPAGE SEMINARE KONEC ********************** */
@@ -341,7 +350,7 @@ menu-link:hover {
 }
 
 .news {
-  background-color: #e5e5e5;
+  background-color: #f8f8f8;
   padding: 8px;
 }
 
@@ -453,7 +462,7 @@ menu-link:hover {
   max-width: 80%;
   align-content: center;
   border-radius: 50%;
-  box-shadow: 0 3px 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* ********************** HOMEPAGE REFERENCE KONEC ******************************** */
@@ -488,9 +497,8 @@ body {
   display: block;
   width: 120px;
   margin: 0 auto;
-  border: 2px solid white;
   border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .lecteur-details {
@@ -528,17 +536,12 @@ body {
 }
 
 .medailonek {
-  display: grid;
-  gap: 32px;
-  grid-template-columns: 1fr 4fr 2fr;
-  justify-items: left;
-  grid-template-columns: auto-fill, minmax(200px, 2fr);
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin: 24px;
+  display: block;
+  text-align: center;
 }
-.medailonek h2 {
-  text-align: left;
+
+.seminar-list {
+  border-top: 1px solid #EA9FA1;
 }
 
 .medailonek-photo {
@@ -547,18 +550,36 @@ body {
 }
 .medailonek-photo img {
   width: 150px;
-  margin: auto;
-  border: 2px solid white;
+  margin: auto 0;
   border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-.seminar-list {
-  padding: 8px;
-  margin: 16px;
-  border-left: 1px solid #a7dadc;
+.part {
+  margin-bottom: 16px;
 }
 
+@media (min-width: 700px) {
+  .medailonek {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 4fr 2fr;
+    justify-items: left;
+    grid-template-columns: auto-fill, minmax(200px, 2fr);
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    margin: 24px;
+  }
+  .medailonek h2 {
+    text-align: left;
+  }
+
+  .seminar-list {
+    padding: 8px;
+    margin: 16px;
+    border-left: 1px solid #EA9FA1;
+  }
+}
 .lessons {
   display: block;
   padding: 8px;
@@ -658,7 +679,7 @@ body {
   border: 1px solid white;
 }
 .footer-newsletter-subscription :hover {
-  background-color: #a7dadc;
+  background-color: #EA9FA1;
 }
 
 .footerarea-f {
