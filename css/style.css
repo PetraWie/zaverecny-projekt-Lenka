@@ -174,10 +174,12 @@ button :hover {
   display: block;
 }
 .header-left .logo-picture {
+  min-width: 100px;
   max-width: 150px;
   height: auto;
   width: 100%;
-  display: inline-block;
+  display: flex;
+  align-items: flex-start;
 }
 
 .menu-class-checkbox {
