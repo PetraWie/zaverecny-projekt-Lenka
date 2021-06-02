@@ -3,7 +3,109 @@ layout: moje-sablona.njk
 title: Kontakty
 ---
 
-stránka se připravuje
+<section class="contact">
+
+    <div class="contact_grid">
+
+        <div class="contact_grid-item">
+            <h1>Kontakt</h1>
+
+            <p>Máte-li jakýkoli dotaz neváhejte se na nás obrátit prostřednictvím kontaktního formuláře, e-mailu anebo nám rovnou zavolejte. </p>
+
+            <h2 class="contact_title">Kontaktní údaje</h2>
+
+            <p>
+                <strong>VALE vzdělávací agentura s.r.o.</strong><br>
+                Ulice 1<br>
+                1111 11 Město
+            </p>
+
+            <p>
+                <strong>Telefon:</strong> +420 123 456 789<br>
+                <strong>E-mail:</strong> <a href="mailto:rtreztr@uztuztuz.zz">agentura@vale.cz</a>
+            </p>
+            
+            <h2 class="contact_title">Kontakty</h2>
+
+            <div class="lecteur">
+        
+                <div class="lecteur-photo">
+            
+                    <img src="/images/portrait_14.jpg" alt="lecteur14">
+            
+                </div>
+            
+                <div class="lecteur-details">
+                    <h3>Ing. Adam Bříza</h3>
+            
+                    <p class="lessons">+420 111 111 111</p>
+                    <a href="mailto:xyz@xxxxxyyyy.zz">a.briza@vale.cz</a>
+            
+                </div>
+        
+            </div>
+
+            <div class="lecteur">
+            
+                <div class="lecteur-photo">
+            
+                    <img src="/images/portrait_14.jpg" alt="lecteur14">
+            
+                </div>
+            
+                <div class="lecteur-details">
+                    <h3>Ing. Adam Bříza</h3>
+            
+                    <p class="lessons">+420 111 111 111</p>
+                    <a href="mailto:xyz@xxxxxyyyy.zz">a.briza@vale.cz</a>
+            
+                </div>
+            
+            </div>
+            
+            </div>
+
+        </div>
+
+        <div class="contact_grid-item">
+
+            <h2>Kontaktní formulář</h2>
+
+            <form action="" method="post">
+
+                <div class="form-field">
+                    <label for="jmeno" class="required">Jméno a příjmení</label>
+                    <input type="text" name="jmeno" id="jmeno" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email" class="required">E-mail</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="telefon">Telefon</label>
+                    <input type="tel" name="telefon" id="telefon">
+                </div>
+
+                <div class="form-field">
+                    <label for="zprava" class="required">Předmět</label>
+                    <textarea name="zprava" id="zprava" rows="6" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="zprava" class="required">Zpráva</label>
+                    <textarea name="zprava" id="zprava" rows="6" required></textarea>
+                </div>
+
+                <button class="button" type="submit">Odeslat zprávu</button>
+
+            </form>
+
+        </div>
+    </div>
+
+</section>
 
 <!-- <section class="contact">
 

@@ -3,6 +3,7 @@ $c-secondary: #EA9FA1;
 $c-complementary: #457b9d;
 $c-contrast: #b61624;
 $c-font: #264354;
+$c-background:#f8f8f8;
 
 $fontbase: "Raleway", sans-serif;
 // $font-special: 
@@ -195,17 +196,18 @@ button {
     .logo-text {
       margin: auto 8px;
       max-width: 150px;
-      width: 100%;
-      display: block;
+      // width: 100%;
+      // display: block;
     }
 
     .logo-picture {
       min-width: 100px;
       max-width: 150px;
-      height: auto;
-      width: 100%;
-      display: flex;
-      align-items: flex-start;
+      align-self: center;
+      // height: auto;
+      // // width: 100%;
+      // display: flex;
+      // align-items: flex-start;
     }
 }
 
@@ -226,7 +228,6 @@ button {
 .menu-list {
   display: none;
   list-style: none;
-  // display: flex;
   margin: 0;
   padding: 0;
   background-color: $c-secondary;
@@ -393,6 +394,81 @@ box-shadow: 0 3px 10px;
 //   // margin-left: 180px;
 // }
 /* *********************    HOMEPAGE SEMINARE KONEC ********************** */
+
+/* *********************     SEMINARE KARTA ********************** */
+
+.doublebutton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.seminar-description {
+
+  .medailonek-text {
+    padding:$padding;
+  }
+
+  .scheldule {
+    padding: $padding;
+    margin: $margin*2;
+    border-radius: 0px 0px 0 0;
+  }
+
+  .card {
+    margin: 0 0 $margin*2 0;
+  }
+
+  h1, h2, h3{
+    text-align: left;
+  }
+
+  h3 {
+    padding-left: 0;
+  }
+
+  .hlavnibody {
+    margin-bottom: $margin*3;
+  }
+
+  .obsah-seminare {
+    background-color:$c-background ;
+    padding: $padding;
+    margin:$margin*2;
+  }
+
+  ul li::marker {
+    font-size: 150%;
+    color: $c-contrast;
+  }
+
+  @media (min-width:700px) {
+
+    .medailonek {
+      grid-template-columns: 1fr 4fr;
+      justify-items: center;
+
+        .medailonek-photo {
+        margin: auto;
+        }
+    }
+
+    .seminar-list {
+      border-left: none;
+    }
+
+  }
+
+  .seminar-list {
+    padding: $padding;
+    margin:$margin*2; 
+    border-left: 1px solid $c-secondary; 
+  }
+}
+
+
+
+/* *********************     SEMINARE KARTA KONEC ********************** */
+
 
 /* ********************** HOMEPAGE AKTUALITY ******************************** */
 
@@ -598,7 +674,7 @@ body {
 }
 
 .lecteur-details {
-  text-align: center;
+  text-align: left;
 }
 
 .lessons {
@@ -662,6 +738,9 @@ body {
   margin-bottom: $margin*2;
 }
 
+.medailonek-text {
+  text-align: left;
+}
 
 @media (min-width:700px) {
 
@@ -677,6 +756,14 @@ body {
     
     h2 {
       text-align: left;
+    }
+
+    .medailonek-photo {
+      margin: auto 0;
+    }
+
+    .seminar-list {
+      border-top: none;
     }
   }
 
@@ -706,10 +793,6 @@ padding: $padding;
     
 //   // }
 // }
-
-
-
-
 
 /* ********************** MEDAILONEK konec ********************************** */ 
 

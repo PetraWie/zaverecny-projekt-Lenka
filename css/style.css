@@ -170,16 +170,11 @@ button :hover {
 .header-left .logo-text {
   margin: auto 8px;
   max-width: 150px;
-  width: 100%;
-  display: block;
 }
 .header-left .logo-picture {
   min-width: 100px;
   max-width: 150px;
-  height: auto;
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
+  align-self: center;
 }
 
 .menu-class-checkbox {
@@ -344,6 +339,60 @@ button :hover {
 }
 
 /* *********************    HOMEPAGE SEMINARE KONEC ********************** */
+/* *********************     SEMINARE KARTA ********************** */
+.doublebutton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.seminar-description .medailonek-text {
+  padding: 8px;
+}
+.seminar-description .scheldule {
+  padding: 8px;
+  margin: 16px;
+  border-radius: 0px 0px 0 0;
+}
+.seminar-description .card {
+  margin: 0 0 16px 0;
+}
+.seminar-description h1, .seminar-description h2, .seminar-description h3 {
+  text-align: left;
+}
+.seminar-description h3 {
+  padding-left: 0;
+}
+.seminar-description .hlavnibody {
+  margin-bottom: 24px;
+}
+.seminar-description .obsah-seminare {
+  background-color: #f8f8f8;
+  padding: 8px;
+  margin: 16px;
+}
+.seminar-description ul li::marker {
+  font-size: 150%;
+  color: #b61624;
+}
+@media (min-width: 700px) {
+  .seminar-description .medailonek {
+    grid-template-columns: 1fr 4fr;
+    justify-items: center;
+  }
+  .seminar-description .medailonek .medailonek-photo {
+    margin: auto;
+  }
+  .seminar-description .seminar-list {
+    border-left: none;
+  }
+}
+.seminar-description .seminar-list {
+  padding: 8px;
+  margin: 16px;
+  border-left: 1px solid #EA9FA1;
+}
+
+/* *********************     SEMINARE KARTA KONEC ********************** */
 /* ********************** HOMEPAGE AKTUALITY ******************************** */
 .header-section {
   text-align: center;
@@ -504,7 +553,7 @@ body {
 }
 
 .lecteur-details {
-  text-align: center;
+  text-align: left;
 }
 
 .lessons {
@@ -561,6 +610,10 @@ body {
   margin-bottom: 16px;
 }
 
+.medailonek-text {
+  text-align: left;
+}
+
 @media (min-width: 700px) {
   .medailonek {
     display: grid;
@@ -574,6 +627,12 @@ body {
   }
   .medailonek h2 {
     text-align: left;
+  }
+  .medailonek .medailonek-photo {
+    margin: auto 0;
+  }
+  .medailonek .seminar-list {
+    border-top: none;
   }
 
   .seminar-list {
