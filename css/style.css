@@ -52,18 +52,6 @@ a {
   text-decoration: none;
   color: white;
 }
-a:hover {
-  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
-  font-size: 400;
-  color: white;
-}
-a:focus {
-  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
-  background-color: #EA9FA1;
-  font-size: 1.2em;
-  color: white;
-  padding: 8px;
-}
 
 button {
   display: block;
@@ -168,6 +156,7 @@ button :hover {
   margin: auto 8px;
 }
 .header-left .logo-text {
+  color: #1d3557;
   margin: auto 8px;
   max-width: 150px;
 }
@@ -189,6 +178,22 @@ button :hover {
 .menu {
   padding: 8px;
   margin: 8px;
+}
+@media (min-width: 700px) {
+  .menu {
+    margin: auto 8px;
+  }
+  .menu .menu-list {
+    display: flex;
+    background-color: white;
+    color: #b61624;
+  }
+  .menu .menu-list a:hover {
+    color: #b61624;
+  }
+  .menu .menu-toggler {
+    display: none;
+  }
 }
 
 .menu-list {
@@ -342,9 +347,13 @@ button :hover {
 /* *********************     SEMINARE KARTA ********************** */
 .doublebutton {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
+.seminar-description .nadpis-seminare {
+  text-align: center;
+  color: #b61624;
+}
 .seminar-description .medailonek-text {
   padding: 8px;
 }
@@ -374,22 +383,29 @@ button :hover {
   font-size: 150%;
   color: #b61624;
 }
+.seminar-description .seminar-list {
+  margin: 16px;
+  border-left: none;
+  padding: 0;
+}
+.seminar-description .prihlaska {
+  display: block;
+  background-color: #f8f8f8;
+  margin: 8px 0;
+  padding-right: 8px;
+}
 @media (min-width: 700px) {
   .seminar-description .medailonek {
     grid-template-columns: 1fr 4fr;
     justify-items: center;
   }
-  .seminar-description .medailonek .medailonek-photo {
+  .seminar-description .medailonek-photo {
     margin: auto;
   }
-  .seminar-description .seminar-list {
-    border-left: none;
+  .seminar-description .prihlaska {
+    display: flex;
+    justify-content: space-between;
   }
-}
-.seminar-description .seminar-list {
-  padding: 8px;
-  margin: 16px;
-  border-left: 1px solid #EA9FA1;
 }
 
 /* *********************     SEMINARE KARTA KONEC ********************** */
@@ -525,7 +541,7 @@ body {
 
 .singlepage-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .team-lecteurs {
@@ -555,6 +571,9 @@ body {
 .lecteur-details {
   text-align: left;
 }
+.lecteur-details h3 {
+  padding-top: 24px;
+}
 
 .lessons {
   line-height: 1;
@@ -576,8 +595,9 @@ body {
 
 .team-lecteurs {
   display: grid;
-  gap: 32px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 64px;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  padding: 16px;
 }
 
 /* ********************** lektoři konec ******************************** */

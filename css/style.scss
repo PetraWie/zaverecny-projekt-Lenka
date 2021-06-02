@@ -69,19 +69,19 @@ a {
   text-decoration: none;
   color:white;
 
-  &:hover {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
-    // background-color:$c-complementary;
-    font-size: 400;
-    color: white;
-    // padding: $padding;
-    }
+  // &:hover {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
+  //   // background-color:$c-complementary;
+  //   font-size: 400;
+  //   color: white;
+  //   // padding: $padding;
+  //   }
 
-  &:focus {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
-    background-color:$c-secondary;
-    font-size: 1.2em;
-    color: white;
-    padding: $padding;
-    }
+  // &:focus {  /*  nastaveno zejména pro odkazy v patičce, ale napr. v paticce u webovek a mailu to tak nechci ani v hlavicce v menu */
+  //   background-color:$c-secondary;
+  //   font-size: 1.2em;
+  //   color: white;
+  //   padding: $padding;
+  //   }
 
 }
 
@@ -193,22 +193,23 @@ button {
   // justify-content: space-between;
   margin: auto $margin;
 
-    .logo-text {
-      margin: auto 8px;
-      max-width: 150px;
-      // width: 100%;
-      // display: block;
-    }
+  .logo-text {
+    color: $c-primary;
+    margin: auto 8px;
+    max-width: 150px;
+    // width: 100%;
+    // display: block;
+  }
 
-    .logo-picture {
-      min-width: 100px;
-      max-width: 150px;
-      align-self: center;
-      // height: auto;
-      // // width: 100%;
-      // display: flex;
-      // align-items: flex-start;
-    }
+  .logo-picture {
+    min-width: 100px;
+    max-width: 150px;
+    align-self: center;
+    // height: auto;
+    // // width: 100%;
+    // display: flex;
+    // align-items: flex-start;
+  }
 }
 
 .menu-class-checkbox {
@@ -223,6 +224,25 @@ button {
 .menu {
   padding: 8px;
   margin: 8px;
+ 
+  @media (min-width: 700px) {
+    margin: auto 8px;
+
+    .menu-list {
+      display: flex;
+      background-color: white;
+      color:$c-contrast;
+       
+      a:hover {
+         color:$c-contrast;
+       }
+    }
+
+    .menu-toggler {
+      display:none;
+    }
+  }
+
 }
 
 .menu-list {
@@ -399,10 +419,15 @@ box-shadow: 0 3px 10px;
 
 .doublebutton {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .seminar-description {
+
+  .nadpis-seminare {
+    text-align: center;
+    color:$c-contrast;
+  }
 
   .medailonek-text {
     padding:$padding;
@@ -441,27 +466,32 @@ box-shadow: 0 3px 10px;
     color: $c-contrast;
   }
 
-  @media (min-width:700px) {
+  .seminar-list {
+    margin:$margin*2; 
+    border-left: none;
+    padding: 0;
+  }
 
+  .prihlaska {
+    display: block;
+    background-color: $c-background;
+    margin:$margin 0;
+    padding-right:$padding;
+  }
+
+  @media (min-width:700px) {
     .medailonek {
       grid-template-columns: 1fr 4fr;
       justify-items: center;
-
-        .medailonek-photo {
-        margin: auto;
-        }
+    }   
+    .medailonek-photo {
+      margin: auto;
     }
 
-    .seminar-list {
-      border-left: none;
-    }
-
+    .prihlaska {
+    display: flex;
+    justify-content: space-between;
   }
-
-  .seminar-list {
-    padding: $padding;
-    margin:$margin*2; 
-    border-left: 1px solid $c-secondary; 
   }
 }
 
@@ -641,7 +671,7 @@ body {
 
 .singlepage-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .team-lecteurs {
@@ -675,6 +705,9 @@ body {
 
 .lecteur-details {
   text-align: left;
+    h3 {
+      padding-top: $padding*3;
+    }
 }
 
 .lessons {
@@ -699,8 +732,9 @@ body {
 
 .team-lecteurs {
   display: grid;
-  gap: $spacer;
-  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: $spacer*2;
+  grid-template-columns: repeat(auto-fill, minmax(225px,1fr));
+  padding:$padding*2;
 }
 
 
