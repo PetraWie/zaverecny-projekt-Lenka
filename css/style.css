@@ -246,13 +246,13 @@ button :hover {
     display: grid;
     gap: 64px;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    align-content: stretch;
     width: 100%;
   }
 }
 
 .card {
   position: relative;
-  margin: 24px;
 }
 
 .scheldule {
@@ -302,12 +302,13 @@ button :hover {
 }
 
 .cardtext {
-  background-color: white;
+  background-color: pink;
   color: black;
   padding: 16px 8px;
   display: block;
   border-radius: 0 0 8px 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  height: 80%;
 }
 
 .cardtext p, h3 {
@@ -496,18 +497,81 @@ button :hover {
   }
 }
 
-.aktuality-singlepage .news-obsah {
+.aktuality-singlepage {
   display: block;
 }
-.aktuality-singlepage .news-img {
-  max-width: 30%;
-  float: left;
-  margin: 8px;
+@media (min-width: 700px) {
+  .aktuality-singlepage {
+    margin: 16px;
+    display: grid;
+    gap: 0 64px;
+    grid-template-columns: 1fr 4fr 2fr;
+    justify-items: center;
+  }
 }
-.aktuality-singlepage .down {
-  max-width: 30%;
-  float: right;
-  margin: 8px;
+.aktuality-singlepage h1, .aktuality-singlepage h2, .aktuality-singlepage h3, .aktuality-singlepage p {
+  grid-column: 2/3;
+}
+.aktuality-singlepage .articleheader {
+  grid-column: 2/3;
+  color: #b61624;
+}
+.aktuality-singlepage figure {
+  display: block;
+  width: 100%;
+  /* aby se to roztáhlo do celé šířky musela jsem nastavit hodnoty width a margin i zde */
+  margin: auto;
+}
+.aktuality-singlepage .uvod {
+  grid-column: 2;
+  font-weight: bold;
+}
+.aktuality-singlepage .tip {
+  background-color: #f8f8f8;
+  padding: 8px 16px;
+  margin-bottom: 24px;
+  margin-top: 16px;
+  justify-items: center;
+  align-items: center;
+}
+.aktuality-singlepage .tip p {
+  margin: 0;
+}
+.aktuality-singlepage .vpravo {
+  grid-column: 3;
+  grid-row: 7;
+  border-left: solid 3px #EA9FA1;
+}
+.aktuality-singlepage .vlevo {
+  grid-column: 1;
+  border-right: solid 3px #EA9FA1;
+}
+.aktuality-singlepage figure {
+  grid-column: 1/3;
+}
+.aktuality-singlepage figcaption {
+  color: grey;
+  margin-left: 16px;
+}
+.aktuality-singlepage blockquote {
+  display: grid;
+  grid-column: 1/3;
+  font-size: 2em;
+  color: #457b9d;
+  margin: auto;
+}
+.aktuality-singlepage blockquote::before,
+.aktuality-singlepage blockquote::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100px;
+  background-image: linear-gradient(to right, #457b9d, #b61624);
+  margin: 8px auto;
+}
+
+.aktuality-singlepage .figure {
+  display: none;
 }
 
 /* ********************** HOMEPAGE AKTUALITY KONEC ******************************** */
@@ -606,11 +670,6 @@ body {
   padding: 16px;
 }
 
-@media (min-width: 900px) {
-  .lecteur-card {
-    display: block;
-  }
-}
 /* ********************** lektoři konec ******************************** */
 /* ***************************** MEDAILONEK ******************************** */
 .medailonek-button {

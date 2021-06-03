@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{title}}</title>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/180d9ba2e3.js" crossorigin="anonymous"></script>
+
+	<!-- Náš vlastní styl -->
+	<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+	<div class="wrapper">
+
+		<header class="header">
+
+			<div class="header-components firstline">
+
+				<div class="header-contact">
+
+					<div class="icon-set">
+						<div class="fas fa-at"></div>
+						<a class="mail"
+							href="mailto:info@projektlenka.cz">info@projektlenka.cz</a>
+					</div>
+
+
+					<div class="icon-set">
+						<div class="fas fa-phone"></div>
+						<span class="phone">+420 111 111 111</span>
+					</div>
+							
+				</div>
+
+				<div class="searchnbutton">
+					<!--  --------------------------------   zkopírovaný element /sovaagency   ------------------------------------ -->
+					<div class="search-component">
+						<form action="/" method="post" id="frm-searchForm-form" class="main-search-form" novalidate="">
+							<div class="search-input">
+							<input type="text" name="search" autocomplete="off" placeholder="Hledej školení a nebo lektora"
+							style="position: relative; vertical-align: top; background-color: white; padding: 8px; width: 50%; border-radius: 15px; border-color: transparent;"	
+							id="frm-searchForm-form-search" required=""
+								data-nette-rules="[{&quot;op&quot;:&quot;:filled&quot;,&quot;msg&quot;:&quot;Zadejte výraz, který chcete vyhledat.&quot;}]">
+									<a href="#" onclick="$(this).closest('form').submit();
+									return false;" class="submit-form-button">
+										<span class="fa fa-search"></span>
+									</a>
+							</div>
+							<input type="hidden" name="_do" value="searchForm-form-submit">
+										<!--[if IE]><input type=IEbug disabled style="display:none"><![endif]-->
+						</form>
+								
+						<div class="snippet-searchForm-autocomplete">
+							<div id="snippet-searchForm-autocomplete">
+									<div class="search-autocomplete" style="display: none"></div>
+							</div>
+						</div>
+					</div>
+					<!-- ---------------------------------------------------------------------------------- -->
+				
+					<button class="login">LOGIN</button> <!-- DOPLNIT LINK KAM TO POVEDE  -->
+				</div>
+			</div>
+			
+			<!-- <h1 class="header__claim">{{title}}</h1> -->
+
+			<!-- <h2 class="header__claim">úvodní claim</h2> -->
+
+			<div class="header-components secondline">
+
+				<a class="header-left" href="/"> 
+
+					<img class="logo-picture" src="/images/logo-VALE-Lenka-prototyp.png" alt="logoVALE">
+
+					<div class="logo-text"> vzdělávací agentura </div>
+					
+				</a>
+				
+
+				<nav class="menu">
+
+					<input type="checkbox" class="menu-class-checkbox" id="menu-checkbox">
+					<label for="menu-checkbox" class="menu-toggler">☰</label>
+
+					<ul class="menu-list">
+						<li class="menu-item"><a href="/" class="menu-link">Homepage</a></li>
+						<li class="menu-item"><a href="/seminare/" class="menu-link">Semináře</a></li>
+						<li class="menu-item"><a href="/aktuality/" class="menu-link">Aktuality</a></li>
+						<li class="menu-item"><a href="/onas/" class="menu-link">O nás</a></li>
+						<li class="menu-item"><a href="/lektori/" class="menu-link">Lektoři</a></li>
+						<li class="menu-item"><a href="/kontakty/" class="menu-link">Kontakt</a></li>
+					</ul>
+				</nav>
+				
+
+			</div>
+		</header>
+
+		<!-- <img class="homepage-image" src="/images/desk.jpg" alt="homepage_img"> -->
+	
+		<main class="main">
+			{{ content | safe }}
+		</main>
+
+
+		<footer class="footer">
+			<div class="footer-block">
+
+				<div class="footer-menu">
+					<div class="info nazev"><h3>vzdělávací agentura VAlE<br></h3>
+					IČO: 123321123</div>
+
+					<div class="info"><h3>Adresa</h3> 
+						
+						Ulice 1<br>
+						111 11 Město<br>
+						
+					</div>
+			
+					<div class="info"><h3>Kontakt</h3>
+						
+						Telefon: +420 111 111 111<br>
+						<a href="https:://www.projektlenka.cz" target="_blank">www.projektlenka.cz</a><br>
+						<a href="mailto:info@projektlenka.cz">info@projektlenka.cz</a>
+						
+					</div>
+				</div>
+
+				
+				<ul class="footer-menu"><h3>Firma</h3>
+					<li class="footermenu-item"><a class="footermenu-link" href="/onas">O nás</a></li>
+		
+					<li class="footermenu-item"><a class="footermenu-link" href="/seminare">Semináře</a></li>
+		
+					<li class="footermenu-item"><a class="footermenu-link" href="/aktuality">Aktuality</a></li>
+		
+					<li class="footermenu-item"><a class="footermenu-link" href="/lektori">Lektoři</a></li>
+				</ul>
+
+				<ul class="footer-menu"><h3>Obchodní podmínky</h3>
+					<li class="footermenu-item"><a class="footermenu-link" href="/obchodni-podminky">Obchodní podmínky</a></li>
+					
+					<li class="footermenu-item"><a class="footermenu-link" href="/organizacni-pokyny">Organizační pokyny</a></li>
+					
+					<li class="footermenu-item"><a class="footermenu-link" href="/zpracovani-osobnich-udaju">Zpracování osobních údajů</a></li>
+				</ul>
+
+				<ul class="footer-menu"><h3>Spolupráce</h3>
+					<li class="footermenu-item"><a class="footermenu-link" href="/nabizim-kurzy">Nabízím kurzy</a></li>
+					
+					<li class="footermenu-item"><a class="footermenu-link" href="/nabizim-skolici-prostory">Nabízím školící prostory</a></li>
+				</ul>
+
+				<form class="footer-newsletter" action="https://submit-form.com/7rhA77z6" method="post">
+					
+					<input 	type="hidden" name="_redirect" value="https://pw-projektlenka.netlify.app"/> 
+
+
+					<h3>Chci dostávat novinky o plánovaných seminářích</h3>
+					<label for="email">Váš email:</label>
+					<input type="email" name="email" id="email" size="24" maxlength="" placeholder="@" required>
+					<!-- <input type="submit" name="tlacitko" value="Přihlásit k odběru newsletteru"> -->
+
+					<button class="footer-newsletter-subscription" type="submit">Přihlásit k odběru newsletteru</button>
+
+					<p>* přihlášením k odběru newslwtteru souhlasíte se spracováním osobních údajů</p>
+				
+				</form>
+
+			</div>	
+
+			
+			<div class="footerarea-f">
+				VEŠKERÉ ÚDAJE NA TOMTO WEBU JSOU SMYŠLENÉ. JEDNÁ SE O FIKTIVNÍ PROJEKT &copy;2021, Petra, Czechitas
+			</div>
+			
+			
+			<!----------------------  TO DO  -------------------------------- 
+						
+				<div class="footer__social">
+
+					<div class="footer__area">
+						<a href="https://www.facebook.com/nazev-uctu" target="blank" rel="noopener">
+							<img class="footer__facebook" src="/images/ikona-facebook" alt="facebook"></a>
+					</div>
+			
+					<div class="footer__area">
+						<a href="https://instagram.com/nazev-uctu" target="blank" rel="noopener">
+							<img class="footer__instagram" src="/images/ikona-instagram" alt="instagram"></a>
+					</div>
+				</div> ----------------------------------------------------->
+
+			
+		</footer>
+	</div>
+</body>
+</html>
