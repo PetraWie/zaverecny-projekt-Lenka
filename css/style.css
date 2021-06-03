@@ -245,7 +245,7 @@ button :hover {
   .seminarcards {
     display: grid;
     gap: 64px;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     align-content: stretch;
     width: 100%;
   }
@@ -302,13 +302,13 @@ button :hover {
 }
 
 .cardtext {
-  background-color: pink;
+  background-color: white;
   color: black;
   padding: 16px 8px;
   display: block;
   border-radius: 0 0 8px 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  height: 80%;
+  height: 75%;
 }
 
 .cardtext p, h3 {
@@ -516,12 +516,6 @@ button :hover {
   grid-column: 2/3;
   color: #b61624;
 }
-.aktuality-singlepage figure {
-  display: block;
-  width: 100%;
-  /* aby se to roztáhlo do celé šířky musela jsem nastavit hodnoty width a margin i zde */
-  margin: auto;
-}
 .aktuality-singlepage .uvod {
   grid-column: 2;
   font-weight: bold;
@@ -539,15 +533,12 @@ button :hover {
 }
 .aktuality-singlepage .vpravo {
   grid-column: 3;
-  grid-row: 7;
+  grid-row: 7/9;
   border-left: solid 3px #EA9FA1;
 }
 .aktuality-singlepage .vlevo {
   grid-column: 1;
   border-right: solid 3px #EA9FA1;
-}
-.aktuality-singlepage figure {
-  grid-column: 1/3;
 }
 .aktuality-singlepage figcaption {
   color: grey;
@@ -583,7 +574,7 @@ button :hover {
   .references {
     display: grid;
     gap: 32px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
 }
 
@@ -737,6 +728,35 @@ body {
 }
 
 /* ********************** MEDAILONEK konec ********************************** */
+/* ********************** O nAS ********************************** */
+.firma {
+  margin: 16px;
+  padding: 16px;
+}
+.firma h1, .firma h2, .firma h3 {
+  text-align: left;
+}
+.firma img {
+  display: block;
+  width: 100%;
+  margin: 8px;
+}
+
+@media (min-width: 700px) {
+  .firma {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .onas {
+    display: flex;
+  }
+
+  img {
+    display: flex;
+  }
+}
+/* ********************** O nAS konec ********************************** */
 .contact {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -842,4 +862,12 @@ body {
   color: white;
   font-size: 0.8em;
   text-align: center;
+}
+
+.osobni-udaje, .podminky {
+  margin: 16px;
+  padding: 16px;
+}
+.osobni-udaje h1, .osobni-udaje h2, .osobni-udaje h3, .podminky h1, .podminky h2, .podminky h3 {
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */
