@@ -86,6 +86,8 @@ a {
 }
 
 button {
+  font-variant: small-caps;
+  font-size: 1.25em;
   display: block;
   background-color: white;
   color: $c-complementary;
@@ -290,14 +292,7 @@ button {
 /********************************************* HOMEPAGE SEMINARE ********************************************/
 
 .container {
-   display: block;
-
-  //   @media screen (min-width:700px) {
-  //     display: grid;
-  //     gap: $spacer;
-  //     grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-  // }
-	
+   display: block;	
 }
 
 .seminarcards { 
@@ -306,6 +301,7 @@ button {
     display: grid;
     gap: $spacer*2;
     grid-template-columns: repeat(auto-fill, minmax(270px,1fr));
+    align-content: stretch;
     width: 100%;
   }
 }
@@ -470,6 +466,10 @@ box-shadow: 0 3px 10px;
     margin:$margin*2; 
     border-left: none;
     padding: 0;
+      .more-info {
+        background-color: $c-contrast;
+        color: white;
+      }
   }
 
   .prihlaska {
@@ -703,6 +703,7 @@ body {
   }
 }
 
+
 .lecteur-details {
   text-align: left;
     h3 {
@@ -737,7 +738,7 @@ body {
   padding:$padding*2;
 }
 
-
+}
 /* ********************** lektoři konec ******************************** */ 
 
 /* ***************************** MEDAILONEK ******************************** */ 
