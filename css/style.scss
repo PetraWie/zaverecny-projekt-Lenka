@@ -27,6 +27,9 @@ body {
   font-size: 1em;
   font-weight: lighter;
   line-height: 1.5;
+  margin:$margin*2;
+  padding-left: $padding;
+
 }
 
 h1 {
@@ -108,7 +111,9 @@ button {
 }
 
 /************************************************ HEADER  *********************************************/
+.header {
 
+}
 // -------------------------------------------- MODRÁ ČÁST ------------------------------------------- 
 .firstline {
   background-color: $c-primary; 
@@ -183,6 +188,7 @@ button {
 // -------------------------------------------- BÍLÁ ČÁST ------------------------------------------- 
 
 .secondline {
+  position:relative;
   background-color: white;
   color:$c-primary;
   display: flex;
@@ -224,6 +230,7 @@ button {
 }
 
 .menu {
+  position: absolute;
   padding: 8px;
   margin: 8px;
  
@@ -954,10 +961,90 @@ padding: $padding;
 // ***********************  KONTAKT  *************************************
 
 .contact {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 32px; 
+  display: block;
+  margin:$margin*2;
+  a {
+    color:$c-contrast;
+  }
+
+  
+  .kontaktni-udaje {
+    font-size: 0.8em;
+      h2, h3 {
+        text-align: left;
+        margin:$margin*2;
+      }
+  }
+  .lecteur {
+    padding:$padding*2:
+    margin-bottom: $margin*3;
+      a {
+        margin-bottom: $margin*2;
+      }
+
+      .lessons{
+        padding:0;
+      }
+
+      .lecteur-details {
+        text-align: center;
+        padding:$padding;
+          .lec-spec {
+            font-size: 0.8em;
+            color:$c-complementary;
+          }
+
+          h3{
+            padding-bottom: 0;
+          }
+
+      }
+  }
 }
+
+.form-field {
+  margin-bottom:$margin;
+}
+
+.form-field label {
+  display: block;
+  color: grey;
+  font-size: 16px;
+  margin-bottom:0;
+}
+
+.form-field :is( input, textarea, select ){
+  width:100%;
+  padding: $padding;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.kontaktni-udaje {
+  padding:$padding*3;
+  background-color: $c-background;
+    h3 {
+      padding:0;
+    }
+    p {
+      margin-left: $margin*2;
+    }
+    .kontaktni-udaje-bold {
+      font-weight: bold;
+    }
+}
+
+
+
+// @media (min-width: 700px) {
+//   .contact {
+//   display: grid;
+//   grid-template-columns: 2fr 2fr;
+//   gap: $spacer*3; 
+//   }
+// }
+
+
 
 
 /* -------------------------------- FOOTER ------------------------------------------- */

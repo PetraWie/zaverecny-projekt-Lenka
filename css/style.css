@@ -12,6 +12,8 @@ body {
   font-size: 1em;
   font-weight: lighter;
   line-height: 1.5;
+  margin: 16px;
+  padding-left: 8px;
 }
 
 h1 {
@@ -758,9 +760,70 @@ body {
 }
 /* ********************** O nAS konec ********************************** */
 .contact {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 32px;
+  display: block;
+  margin: 16px;
+}
+.contact a {
+  color: #b61624;
+}
+.contact .kontaktni-udaje {
+  font-size: 0.8em;
+}
+.contact .kontaktni-udaje h2, .contact .kontaktni-udaje h3 {
+  text-align: left;
+  margin: 16px;
+}
+.contact .lecteur {
+  margin-bottom: 24px;
+}
+.contact .lecteur a {
+  margin-bottom: 16px;
+}
+.contact .lecteur .lessons {
+  padding: 0;
+}
+.contact .lecteur .lecteur-details {
+  text-align: center;
+  padding: 8px;
+}
+.contact .lecteur .lecteur-details .lec-spec {
+  font-size: 0.8em;
+  color: #457b9d;
+}
+.contact .lecteur .lecteur-details h3 {
+  padding-bottom: 0;
+}
+
+.form-field {
+  margin-bottom: 8px;
+}
+
+.form-field label {
+  display: block;
+  color: grey;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.form-field :is(input, textarea, select) {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.kontaktni-udaje {
+  padding: 24px;
+  background-color: #f8f8f8;
+}
+.kontaktni-udaje h3 {
+  padding: 0;
+}
+.kontaktni-udaje p {
+  margin-left: 16px;
+}
+.kontaktni-udaje .kontaktni-udaje-bold {
+  font-weight: bold;
 }
 
 /* -------------------------------- FOOTER ------------------------------------------- */
