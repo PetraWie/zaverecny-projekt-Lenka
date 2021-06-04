@@ -111,9 +111,7 @@ button {
 }
 
 /************************************************ HEADER  *********************************************/
-.header {
 
-}
 // -------------------------------------------- MODRÁ ČÁST ------------------------------------------- 
 .firstline {
   background-color: $c-primary; 
@@ -487,7 +485,10 @@ box-shadow: 0 3px 10px;
     display: block;
     background-color: $c-background;
     margin:$margin 0;
-    padding-right:$padding;
+    padding: 24px;
+      .button {
+        margin-bottom:16px;
+      }
   }
 
   @media (min-width:700px) {
@@ -500,8 +501,9 @@ box-shadow: 0 3px 10px;
     }
 
     .prihlaska {
-    display: flex;
-    justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
+  
   }
   }
 }
@@ -729,7 +731,7 @@ box-shadow: 0 3px 10px;
       @media (min-width:700px) {
         display: grid;
         gap: $spacer;
-        grid-template-columns: repeat(auto-fill, minmax(230px,1fr))
+        grid-template-columns: repeat(auto-fill, minmax(210px,1fr))
       }
 		// max-width: 100%;
 		// flex-direction: row;
@@ -781,6 +783,9 @@ body {
     // border: 1px solid $c-contrast;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
+      .button {
+        align-self:end;
+      }
 }
 
 .lecteur-photo {
@@ -831,6 +836,13 @@ body {
   gap: $spacer*2;
   grid-template-columns: repeat(auto-fill, minmax(225px,1fr));
   padding:$padding*2;
+}
+
+.position-button {
+  position: absolute;
+	left: 0px;
+	top: 0px;
+  background-color:red;
 }
 
 /* ********************** lektoři konec ******************************** */ 
@@ -941,23 +953,6 @@ padding: $padding;
       margin: $margin;
     }    
 }
-
-@media (min-width:700px) {
-  .firma {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .onas {
-    display: flex;
-  }
-
-  img {
-    display: flex;
-  }
-
-}
-
 /* ********************** O nAS konec ********************************** */
 
 
@@ -980,7 +975,7 @@ padding: $padding;
       }
   }
   .lecteur {
-    padding:$padding*2:
+    padding: $padding*2;
     margin-bottom: $margin*3;
       a {
         margin-bottom: $margin*2;
@@ -1164,5 +1159,11 @@ padding: $padding;
     h1, h2, h3 {
       text-align: left;
     }
+}
+
+.nabidka-kurzu, .prostory {
+  @media (min-width: 700px) {
+    margin: 60px;
+    background-color: pink;
 }
 
